@@ -9,6 +9,7 @@
  */
 ?>
 	<footer>
+		<div class="totop"><a href="#">^</a></div>
 		<div class="wrapper">
 			<?php
 			// Include left footer

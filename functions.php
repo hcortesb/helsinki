@@ -66,6 +66,11 @@ function parallactic_setup() {
 	add_action( 'widgets_init', 'parallactic_widgets_init' );
 	add_filter( 'dynamic_sidebar_params', 'parallactic_filter_dynamic_sidebar_params' );
 
+	// customizer
+	include_once( $vendor_dir . 'parallactic/customizer.php' );
+	add_action( 'wp_head', 'parallactic_print_customized_css' );
+	add_action( 'customize_register', 'parallactic_register_customizer_sections' );
+
 	// frontend only
 	if ( ! is_admin() ) {
 
@@ -98,5 +103,10 @@ function parallactic_setup() {
 		// style
 		include_once( $vendor_dir . 'parallactic/backend/style.php' );
 		add_action( 'admin_enqueue_scripts', 'parallactic_admin_enqueue_styles' );
+
+		// marketpress
+		include_once( $vendor_dir . 'marketpress/setup.php' );
+		parallactic_marketpress_setup();
 	}
+
 }

@@ -294,7 +294,7 @@ body > main article {
 	margin: 0;
 }
 
-body > main article .wrapper {
+main .wrapper {
 	padding: 50px;
 	box-sizing: border-box;
 }
@@ -529,7 +529,7 @@ ol.commentlist {
 
 .comment-text {
 	float: left;
-	max-width: 1000px;
+	max-width: 900px;
 	text-align: left;
 	margin-left: 50px;
 }

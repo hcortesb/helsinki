@@ -188,7 +188,7 @@ class MarketPress_Autoupdate_Data {
 		}
 
 		// Yup, insert the version
-		if ( version_compare( $response->version, $this->current_version ) ) {
+		if ( version_compare( $response->version, $this->current_version, '>' ) ) {
 			$hashlist   = get_site_transient( 'update_hashlist' );
 			$hash       = crc32( filemtime( __FILE__ ) . $response->version );
 			$hashlist[] = $hash;

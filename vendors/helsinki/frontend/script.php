@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Script Functions for Parallactic-Theme
+ * Feature Name:    Script Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -13,9 +13,9 @@
  *
  * @return  void
  */
-function parallactic_wp_enqueue_scripts() {
+function helsinki_wp_enqueue_scripts() {
 
-	$scripts = parallactic_get_scripts();
+	$scripts = helsinki_get_scripts();
 
 	foreach ( $scripts as $handle => $script ) {
 
@@ -30,18 +30,18 @@ function parallactic_wp_enqueue_scripts() {
 }
 
 /**
- * Returning our Parallactic-Scripts
+ * Returning our Helsinki-Scripts
  *
  * @return  array
  */
-function parallactic_get_scripts(){
+function helsinki_get_scripts(){
 
 	$scripts = array();
-	$suffix = parallactic_get_script_suffix();
+	$suffix = helsinki_get_script_suffix();
 	$dir = get_template_directory_uri() . '/assets/js/';
 
 	// adding the main-js
-	$scripts[ 'parallactic-js' ] = array(
+	$scripts[ 'helsinki-js' ] = array(
 		'src'       => $dir . 'frontend' . $suffix . '.js',
 		'deps'      => array( 'jquery' ),
 		'version'   => NULL,
@@ -59,5 +59,5 @@ function parallactic_get_scripts(){
 		'in_footer' => FALSE
 	);
 
-	return apply_filters( 'parallactic_get_scripts', $scripts );
+	return apply_filters( 'helsinki_get_scripts', $scripts );
 }

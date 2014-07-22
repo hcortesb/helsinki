@@ -8,7 +8,7 @@
  * e.g., it puts together the home page when no home.php file exists.
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

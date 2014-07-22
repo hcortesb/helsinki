@@ -3,7 +3,7 @@
  * The template for displaying Category pages
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

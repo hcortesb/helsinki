@@ -3,7 +3,7 @@
  * The template for displaying Search Results pages
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

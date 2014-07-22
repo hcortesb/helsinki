@@ -3,7 +3,7 @@
  * Custom Header Stuff
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 
 if ( ! is_front_page() && ! is_home() )

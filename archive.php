@@ -11,7 +11,7 @@
  * and author.php for Author archives.
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

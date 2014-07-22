@@ -3,7 +3,7 @@
  * The article thumbnail
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 ?>
 <?php if ( has_post_thumbnail() ) :

@@ -9,15 +9,15 @@
 /**
  * Set up the WordPress core custom header settings.
  *
- * @uses parallactic_header_style()
- * @uses parallactic_admin_header_style()
- * @uses parallactic_admin_header_image()
+ * @uses helsinki_header_style()
+ * @uses helsinki_admin_header_style()
+ * @uses helsinki_admin_header_image()
  *
  * @return void
  */
-function parallactic_custom_header_setup() {
+function helsinki_custom_header_setup() {
 	/**
-	 * Filter Parallactic custom-header support arguments.
+	 * Filter Helsinki custom-header support arguments.
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -32,31 +32,31 @@ function parallactic_custom_header_setup() {
 	 *                                          the Appearance > Header screen.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'parallactic_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'helsinki_custom_header_args', array(
 		'width'                  => 1280,
 		'height'                 => 800,
 		'default-text-color'     => 'fff',
-		'wp-head-callback'       => 'parallactic_header_style',
-		'admin-head-callback'    => 'parallactic_admin_header_style',
-		'admin-preview-callback' => 'parallactic_admin_header_image',
+		'wp-head-callback'       => 'helsinki_header_style',
+		'admin-head-callback'    => 'helsinki_admin_header_style',
+		'admin-preview-callback' => 'helsinki_admin_header_image',
 	) ) );
 }
 
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see parallactic_custom_header_setup().
+ * @see helsinki_custom_header_setup().
  *
  * @return void
  */
-function parallactic_header_style() {
+function helsinki_header_style() {
 
 	// load the header, but keep the things clean
 	$custom_header = get_custom_header();
 	if ( empty( $custom_header->url ) )
 		return;
 	?>
-	<style type="text/css" id="parallactic-header-css">
+	<style type="text/css" id="helsinki-header-css">
 		body > header {
 			color: #<?php echo get_header_textcolor(); ?>;
 			height: <?php echo $custom_header->height; ?>px;
@@ -75,13 +75,13 @@ function parallactic_header_style() {
 /**
  * Style the header image displayed on the Appearance > Header screen.
  *
- * @see parallactic_custom_header_setup().
+ * @see helsinki_custom_header_setup().
  *
  * @return void
  */
-function parallactic_admin_header_style() {
+function helsinki_admin_header_style() {
 	?>
-	<style type="text/css" id="parallactic-header-css">
+	<style type="text/css" id="helsinki-header-css">
 		#headimg {
 			text-align: center;
 			font-family: 'Open Sans Condensed', sans-serif;
@@ -113,11 +113,11 @@ function parallactic_admin_header_style() {
 /**
  * Create the custom header image markup displayed on the Appearance > Header screen.
  *
- * @see parallactic_custom_header_setup().
+ * @see helsinki_custom_header_setup().
  *
  * @return void
  */
-function parallactic_admin_header_image() {
+function helsinki_admin_header_image() {
 
 	// load the custom header stlye
 	$custom_header = get_custom_header();

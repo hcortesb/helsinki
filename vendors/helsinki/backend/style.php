@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Style Functions for Parallactic-Backend
+ * Feature Name:    Style Functions for Helsinki-Backend
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -13,9 +13,9 @@
  *
  * @return  Void
  */
-function parallactic_admin_enqueue_styles() {
+function helsinki_admin_enqueue_styles() {
 
-	$styles = parallactic_get_admin_styles();
+	$styles = helsinki_get_admin_styles();
 
 	foreach( $styles as $key => $style ){
 		wp_enqueue_style(
@@ -33,21 +33,21 @@ function parallactic_admin_enqueue_styles() {
  *
  * @return  Array
  */
-function parallactic_get_admin_styles(){
+function helsinki_get_admin_styles(){
 
-	$suffix = parallactic_get_script_suffix();
+	$suffix = helsinki_get_script_suffix();
 	$dir    = get_template_directory_uri() . '/assets/css/';
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'media' => $media )
 	$styles = array();
 
 	// adding the main-CSS
-	$styles[ 'parallactic-admin' ] = array(
+	$styles[ 'helsinki-admin' ] = array(
 		'src'       => $dir . 'admin' . $suffix . '.css',
 	    'deps'      => NULL,
 	    'version'   => NULL,
 	    'media'     => NULL
 	);
 
-	return apply_filters( 'parallactic_get_admin_styles', $styles );
+	return apply_filters( 'helsinki_get_admin_styles', $styles );
 }

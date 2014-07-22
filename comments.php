@@ -5,7 +5,7 @@
  * The area of the page that contains comments and the comment form.
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 if ( ! have_comments() && ! comments_open() )
@@ -16,7 +16,7 @@ if ( ! have_comments() && ! comments_open() )
 	<div class="wrapper">
 		<?php if ( post_password_required() ) : ?>
 			<p class="nopassword">
-				<?php _e( 'This post is password protected. Enter the password to view any comments.', 'PARALLACTIC_TEXTDOMAIN' ); ?>
+				<?php _e( 'This post is password protected. Enter the password to view any comments.', 'helsinki' ); ?>
 			</p>
 		<?php
 			return;
@@ -25,7 +25,7 @@ if ( ! have_comments() && ! comments_open() )
 		if ( have_comments() ) {
 			echo '<h2 id="commentheadline">';
 				printf(
-					_nx( '1 Comment', '%1$s Comments', get_comments_number(), 'Comments title', 'PARALLACTIC_TEXTDOMAIN' ),
+					_nx( '1 Comment', '%1$s Comments', get_comments_number(), 'Comments title', 'helsinki' ),
 					number_format_i18n( get_comments_number() )
 				);
 			echo '</h2>';

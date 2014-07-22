@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Attachment Helper Functions for Parallactic-Theme
+ * Feature Name:    Attachment Helper Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -11,12 +11,12 @@
  *
  * @return  void
  */
-function parallactic_register_image_sizes() {
+function helsinki_register_image_sizes() {
 
 	$default_sizes = array(
 		'post-thumbnail'    => array( 'width' => 1280, 'height' => 800, 'crop' => TRUE ),
 	);
-	$default_sizes = apply_filters( 'parallactic_image_sizes', $default_sizes );
+	$default_sizes = apply_filters( 'helsinki_image_sizes', $default_sizes );
 
 	foreach ( $default_sizes as $id => $args )
 		add_image_size( $id, $args[ 'width' ], $args[ 'height' ], $args[ 'crop' ] );
@@ -31,7 +31,7 @@ function parallactic_register_image_sizes() {
  * @param   String $content
  * @return  String
  */
-function parallactic_caption_shortcode( $output, $attr, $content ) {
+function helsinki_caption_shortcode( $output, $attr, $content ) {
 
 	$output = '<figure class="wp-caption ' . $attr[ 'align' ] . '">';
 	$output .= $content;

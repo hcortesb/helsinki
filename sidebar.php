@@ -3,6 +3,6 @@
  * The Sidebar containing the main widget area
  *
  * @package		WordPress
- * @subpackage	Parallactic
+ * @subpackage	Helsinki
  */
 ?>

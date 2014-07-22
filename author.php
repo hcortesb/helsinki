@@ -3,7 +3,7 @@
  * The template for displaying Author archive pages
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

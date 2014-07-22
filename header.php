@@ -6,7 +6,7 @@
  * everything up till some navigation parts
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 ?>
 <!Doctype html>
@@ -37,7 +37,7 @@
 				 *
 				 * The logo contains the blogname by default. It is
 				 * possible to change it to a logo image via the
-				 * filter `parallactic_get_logo`
+				 * filter `helsinki_get_logo`
 				 */
 				get_template_part( 'parts/header', 'logo' );
 				?>

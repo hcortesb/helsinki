@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Comment Functions for Parallactic-Theme
+ * Feature Name:    Comment Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -14,7 +14,7 @@
  * @param  int    $depth
  * @return void
  */
-function parallactic_the_comment( $comment, Array $args = array(), $depth = 0 ) {
+function helsinki_the_comment( $comment, Array $args = array(), $depth = 0 ) {
 	?>
 	<li itemprop="reviews" itemscope="" itemtype="http://schema.org/Review" <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 		<div class="comment_container">
@@ -29,7 +29,7 @@ function parallactic_the_comment( $comment, Array $args = array(), $depth = 0 ) 
 					        _x(
 						        '%1$s @ %2$s',
 						        '1: date, 2: time for comment meta',
-						        'PARALLACTIC_TEXTDOMAIN'
+						        'helsinki'
 					        ),
 					        get_comment_date(),
 					        get_comment_time()
@@ -39,7 +39,7 @@ function parallactic_the_comment( $comment, Array $args = array(), $depth = 0 ) 
 			</div>
 			<?php if ( $comment->comment_approved === '0' ) : ?>
 				<p class="comment-awaiting-moderation alert-info"><?php
-					_e( 'Your comment is awaiting moderation.', 'PARALLACTIC_TEXTDOMAIN' );
+					_e( 'Your comment is awaiting moderation.', 'helsinki' );
 					?></p>
 			<?php endif; ?>
 			<div class="comment-text">
@@ -68,7 +68,7 @@ function parallactic_the_comment( $comment, Array $args = array(), $depth = 0 ) 
 				array_merge(
 					$args,
 					array(
-					     'reply_text'=> __( 'Reply to this comment', 'PARALLACTIC_TEXTDOMAIN' ),
+					     'reply_text'=> __( 'Reply to this comment', 'helsinki' ),
 					     'depth' 	=> $depth,
 					     'max_depth'	=> 999
 					)
@@ -87,7 +87,7 @@ function parallactic_the_comment( $comment, Array $args = array(), $depth = 0 ) 
  * @param   int $post_id Post ID for comment query. Default is current post.
  * @return  int
  */
-function parallactic_get_count_pings( $post_id = NULL ) {
+function helsinki_get_count_pings( $post_id = NULL ) {
 	global $wp_query;
 
 	$pings	  = 0;
@@ -121,11 +121,11 @@ function parallactic_get_count_pings( $post_id = NULL ) {
  * @param   object $comment
  * @return  void
  */
-function parallactic_the_pings( $comment ) {
+function helsinki_the_pings( $comment ) {
 
 	$url	    = esc_url( $comment->comment_author_url );
 	$icon_args  = array( 'url' => $url );
-	$icon	    = parallactic_get_external_favicon( $icon_args );
+	$icon	    = helsinki_get_external_favicon( $icon_args );
 	$name	    = esc_html( $comment->comment_author );
 
 	printf(
@@ -144,7 +144,7 @@ function parallactic_the_pings( $comment ) {
  * @param   array $args array( 'url' => string, 'class' => string, 'size' => integer, 'alt' => string )
  * @return  string
  */
-function parallactic_get_external_favicon( Array $args = array()  ) {
+function helsinki_get_external_favicon( Array $args = array()  ) {
 
 	$default_args = array(
 		'url'   => '',
@@ -153,12 +153,12 @@ function parallactic_get_external_favicon( Array $args = array()  ) {
 		'alt'   => ''
 	);
 
-	$rtn = apply_filters( 'pre_parallactic_get_external_favicon', FALSE, $args, $default_args );
+	$rtn = apply_filters( 'pre_helsinki_get_external_favicon', FALSE, $args, $default_args );
 	if ( $rtn !== FALSE )
 		return $rtn;
 
 	$args = wp_parse_args( $args, $default_args );
-	$args = apply_filters( 'parallactic_get_external_favicon_args', $args );
+	$args = apply_filters( 'helsinki_get_external_favicon_args', $args );
 
 	$output = '';
 
@@ -176,5 +176,5 @@ function parallactic_get_external_favicon( Array $args = array()  ) {
 		);
 	}
 
-	return apply_filters( 'parallactic_get_external_favicon', $output, $args );
+	return apply_filters( 'helsinki_get_external_favicon', $output, $args );
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    General template stuff for Parallactic-Theme
+ * Feature Name:    General template stuff for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -11,10 +11,10 @@
  *
  * @return  string
  */
-function parallactic_get_logo() {
+function helsinki_get_logo() {
 
 	// register the pre filter to bypass this function
-	$pre = apply_filters( 'pre_parallactic_get_logo', FALSE );
+	$pre = apply_filters( 'pre_helsinki_get_logo', FALSE );
 	if ( $pre !== FALSE )
 		return $pre;
 
@@ -22,7 +22,7 @@ function parallactic_get_logo() {
 	$default = '<h1 class="logo"><a href="' . get_bloginfo( 'url' ) . '">' . get_bloginfo( 'name' ) . '</a></h1>';
 
 	// return string, by adding the default markup to the filter
-	return apply_filters( 'parallactic_get_logo', $default );
+	return apply_filters( 'helsinki_get_logo', $default );
 }
 
 /**
@@ -35,7 +35,7 @@ function parallactic_get_logo() {
  * @param   string $seplocation
  * @return  string
  */
-function parallactic_filter_wp_title( $title, $sep, $seplocation ) {
+function helsinki_filter_wp_title( $title, $sep, $seplocation ) {
 
 	// return just the blogname if there is
 	// no title to display
@@ -60,10 +60,10 @@ function parallactic_filter_wp_title( $title, $sep, $seplocation ) {
  * @param   string $class
  * @return  array
  */
-function parallactic_filter_body_class( $classes, $class ) {
+function helsinki_filter_body_class( $classes, $class ) {
 
-	if ( ! in_array( 'parallactic-body', $classes ) )
-		$classes[] = 'parallactic-body';
+	if ( ! in_array( 'helsinki-body', $classes ) )
+		$classes[] = 'helsinki-body';
 
 	return $classes;
 }
@@ -75,8 +75,8 @@ function parallactic_filter_body_class( $classes, $class ) {
  *
  * @return  void
  */
-function parallactic_the_favicon() {
-	echo parallactic_get_favicon();
+function helsinki_the_favicon() {
+	echo helsinki_get_favicon();
 }
 
 /**
@@ -84,7 +84,7 @@ function parallactic_the_favicon() {
  *
  * @return  string
  */
-function parallactic_get_favicon() {
+function helsinki_get_favicon() {
 
 	// the favicon name
 	$favicon_name = 'favicon.ico';
@@ -105,7 +105,7 @@ function parallactic_get_favicon() {
 	if ( $favicon_uri !== '' )
 		$markup = '<link rel="shortcut icon" href="' . $favicon_uri . $asset_dir . $favicon_name . '">';
 
-	return apply_filters( 'parallactic_get_favicon', $markup, $favicon_uri, $asset_dir, $favicon_name );
+	return apply_filters( 'helsinki_get_favicon', $markup, $favicon_uri, $asset_dir, $favicon_name );
 }
 
 /**
@@ -113,7 +113,7 @@ function parallactic_get_favicon() {
  *
  * @return string
  */
-function parallactic_get_footer_theme_info() {
+function helsinki_get_footer_theme_info() {
 
 	$theme_data = wp_get_theme( get_template() );
 
@@ -121,7 +121,7 @@ function parallactic_get_footer_theme_info() {
 	$author     = $theme_data->get( 'Author' );
 
 	$link =  sprintf(
-		_x( 'A %1$s Beta-Theme', 'Theme author link', 'PARALLACTIC_TEXTDOMAIN' ),
+		_x( 'A %1$s Beta-Theme', 'Theme author link', 'helsinki' ),
 		'<a href="' . $author_uri . '" rel="designer">' . $author . '</a>'
 	);
 
@@ -131,5 +131,5 @@ function parallactic_get_footer_theme_info() {
 		$link
 	);
 
-	return apply_filters( 'parallactic_get_footer_theme_info', $markup, $author_uri, $author );
+	return apply_filters( 'helsinki_get_footer_theme_info', $markup, $author_uri, $author );
 }

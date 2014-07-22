@@ -4,7 +4,7 @@
  * Used to display archive-type pages for posts in a tag.
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

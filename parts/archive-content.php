@@ -3,7 +3,7 @@
  * The article
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 
 ?>
@@ -24,12 +24,12 @@
 			 */
 			get_template_part( 'parts/article', 'meta' );
 			?>
-			<?php do_action( 'parallactic_archive_post_header' ); ?>
+			<?php do_action( 'helsinki_archive_post_header' ); ?>
 		</header>
 		<main>
-			<?php do_action( 'parallactic_archive_post_before_content' ); ?>
-			<?php the_excerpt(); ?>
-			<?php do_action( 'parallactic_archive_post_after_content' ); ?>
+			<?php do_action( 'helsinki_archive_post_before_content' ); ?>
+			<?php the_content(); ?>
+			<?php do_action( 'helsinki_archive_post_after_content' ); ?>
 		</main>
 		<footer>
 			<?php
@@ -38,7 +38,7 @@
 			 */
 			get_template_part( 'parts/article', 'comment-count' );
 			?>
-			<?php do_action( 'parallactic_archive_post_footer' ); ?>
+			<?php do_action( 'helsinki_archive_post_footer' ); ?>
 		</footer>
 	</div>
 </article>

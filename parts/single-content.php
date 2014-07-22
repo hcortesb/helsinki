@@ -3,7 +3,7 @@
  * The article
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 ?>
 
@@ -23,15 +23,15 @@
 			 */
 			get_template_part( 'parts/article', 'meta' );
 			?>
-			<?php do_action( 'parallactic_single_post_header' ); ?>
+			<?php do_action( 'helsinki_single_post_header' ); ?>
 		</header>
 		<main>
-			<?php do_action( 'parallactic_single_post_before_content' ); ?>
+			<?php do_action( 'helsinki_single_post_before_content' ); ?>
 			<?php the_content(); ?>
-			<?php do_action( 'parallactic_single_post_after_content' ); ?>
+			<?php do_action( 'helsinki_single_post_after_content' ); ?>
 		</main>
 		<footer>
-			<?php do_action( 'parallactic_single_post_footer' ); ?>
+			<?php do_action( 'helsinki_single_post_footer' ); ?>
 		</footer>
 	</div>
 </article>

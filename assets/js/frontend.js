@@ -7,7 +7,7 @@
 
 /** Menu **/
 ( function( $ ) {
-	var parallactic = {
+	var helsinki = {
 			
 		// Pseudo-Constructor of this class
 		init: function () {
@@ -37,5 +37,5 @@
 		}
 	};
 	
-	$( document ).ready( parallactic.init );
+	$( document ).ready( helsinki.init );
 } )( jQuery );

@@ -6,10 +6,10 @@
  * until you need to add markup around it for whatever reason.
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 ?>
 
 <nav class="pagination" role="navigation">
-	<?php echo parallactic_get_posts_pagination(); ?>
+	<?php echo helsinki_get_posts_pagination(); ?>
 </nav>

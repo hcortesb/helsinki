@@ -3,7 +3,7 @@
  * The page meta
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 ?>
 

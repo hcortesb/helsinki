@@ -6,7 +6,7 @@
  * see an alert message suggesting to create a menu.
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 $nav_items_wrap = '<nav role="navigation">';
 $nav_items_wrap .= '<ul id="%1$s" class="%2$s">%3$s</ul>';
@@ -14,7 +14,7 @@ $nav_items_wrap .= '</nav>';
 
 wp_nav_menu(
 	array(
-		'theme_location'=> 'parallactic_footer',
+		'theme_location'=> 'helsinki_footer',
 		'container'     => FALSE,
 		'items_wrap'    => $nav_items_wrap
 	)

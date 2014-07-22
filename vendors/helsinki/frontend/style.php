@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Style Functions for Parallactic-Theme
+ * Feature Name:    Style Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -20,7 +20,7 @@
  * @param   string $handle
  * @return  string
  */
-function parallactic_filter_style_loader_src( $url, $handle ){
+function helsinki_filter_style_loader_src( $url, $handle ){
 
 	$host = parse_url( $url, PHP_URL_HOST );
 
@@ -37,9 +37,9 @@ function parallactic_filter_style_loader_src( $url, $handle ){
  *
  * @return  Void
  */
-function parallactic_wp_enqueue_styles() {
+function helsinki_wp_enqueue_styles() {
 
-	$styles = parallactic_get_styles();
+	$styles = helsinki_get_styles();
 
 	foreach( $styles as $key => $style ){
 		wp_enqueue_style(
@@ -53,20 +53,20 @@ function parallactic_wp_enqueue_styles() {
 }
 
 /**
- * Returning our Parallactic-Styles
+ * Returning our Helsinki-Styles
  *
  * @return  Array
  */
-function parallactic_get_styles(){
+function helsinki_get_styles(){
 
-	$suffix = parallactic_get_script_suffix();
+	$suffix = helsinki_get_script_suffix();
 	$dir    = get_template_directory_uri() . '/assets/css/';
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'media' => $media )
 	$styles = array();
 
 	// adding the main-CSS
-	$styles[ 'parallactic' ] = array(
+	$styles[ 'helsinki' ] = array(
 		'src'       => $dir . 'style' . $suffix . '.css',
 	    'deps'      => NULL,
 	    'version'   => NULL,
@@ -74,7 +74,7 @@ function parallactic_get_styles(){
 	);
 
 	// adding the media-CSS
-	$styles[ 'parallactic-media' ] = array(
+	$styles[ 'helsinki-media' ] = array(
 		'src'       => $dir . 'media' . $suffix . '.css',
 		'deps'      => NULL,
 		'version'   => NULL,
@@ -84,19 +84,19 @@ function parallactic_get_styles(){
 	// adding our webfonts
 	$protocol	= is_ssl() ? 'https' : 'http';
 	$open_sans_query_args = array( 'family' => 'Open+Sans:400,300,700' );
-	$styles[ 'parallactic-webfont-open-sans' ] = array(
+	$styles[ 'helsinki-webfont-open-sans' ] = array(
 		'src'       => add_query_arg( $open_sans_query_args, "$protocol://fonts.googleapis.com/css" ),
 		'deps'      => array(),
 		'version'   => NULL,
 		'media'     => NULL
 	);
 	$open_sans_condensed_query_args = array( 'family' => 'Open+Sans+Condensed:300,700' );
-	$styles[ 'parallactic-webfont-open-sans-condensed' ] = array(
+	$styles[ 'helsinki-webfont-open-sans-condensed' ] = array(
 		'src'       => add_query_arg( $open_sans_condensed_query_args, "$protocol://fonts.googleapis.com/css" ),
 		'deps'      => array(),
 		'version'   => NULL,
 		'media'     => NULL
 	);
 
-	return apply_filters( 'parallactic_get_styles', $styles );
+	return apply_filters( 'helsinki_get_styles', $styles );
 }

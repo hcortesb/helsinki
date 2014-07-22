@@ -1,13 +1,13 @@
 <?php
 /**
- * Feature Name:    Customizer Stuff for Parallactic
+ * Feature Name:    Customizer Stuff for Helsinki
  * Version:		    0.1
  * Author:		    Inpsyde GmbH for MarketPress.com
  * Author URI:	    http://inpsyde.com/
  */
 
 /**
- * Register the parallactic specific customizer options. In our
+ * Register the helsinki specific customizer options. In our
  * case it is a simple color picker to set a specific
  * key color.
  *
@@ -15,10 +15,10 @@
  *
  * @return void
  */
-function parallactic_register_customizer_sections( $wp_customize ) {
+function helsinki_register_customizer_sections( $wp_customize ) {
 
-	$wp_customize->add_section( 'parallactic_colors' , array(
-		'title' => __( 'Colors', 'theme_parallactic' )
+	$wp_customize->add_section( 'helsinki_colors' , array(
+		'title' => __( 'Colors', 'theme_helsinki' )
 	) );
 
 	$wp_customize->add_setting( 'link_color', array(
@@ -27,8 +27,8 @@ function parallactic_register_customizer_sections( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label' => __( 'Key Color', 'theme_parallactic' ),
-		'section' => 'parallactic_colors',
+		'label' => __( 'Key Color', 'theme_helsinki' ),
+		'section' => 'helsinki_colors',
 		'settings' => 'link_color',
 	) ) );
 }
@@ -39,7 +39,7 @@ function parallactic_register_customizer_sections( $wp_customize ) {
  *
  * @return void
  */
-function parallactic_print_customized_css() {
+function helsinki_print_customized_css() {
 
 	$color = get_theme_mod( 'link_color' );
 	if ( ! $color )

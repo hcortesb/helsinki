@@ -5,7 +5,7 @@
  * Contains footer content and the closing of the latest elements
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 ?>
 	<footer>
@@ -25,7 +25,7 @@
 		<div class="wrapper">
 			<?php
 			// Include right copyline
-			echo parallactic_get_footer_theme_info();
+			echo helsinki_get_footer_theme_info();
 			// Include left copyline
 			get_template_part( 'parts/footer', 'navigation' );
 			?>

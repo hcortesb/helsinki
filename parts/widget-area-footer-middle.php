@@ -3,7 +3,7 @@
  * The middle footer widget area
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 if ( is_active_sidebar( 'footer-middle' ) ) : ?>
 	<aside class="widget-area widget-column column">

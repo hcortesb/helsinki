@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Widget Functions for Parallactic-Theme
+ * Feature Name:    Widget Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -13,24 +13,24 @@
  *
  * @return  array
  */
-function parallactic_widgets_init() {
+function helsinki_widgets_init() {
 
 	// Define widget areas
 	$sidebars = array(
 		'footer-left' => array(
 			'class' => 'widget-area widget-column column',
-			'name'  => _x( 'Footer Left', 'Widget area name in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' ),
-			'desc'  => _x( 'Widget area at the left footer', 'Widget area description in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' )
+			'name'  => _x( 'Footer Left', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
+			'desc'  => _x( 'Widget area at the left footer', 'Widget area description in wp-admin/widgets.php', 'helsinki' )
 		),
 		'footer-middle' => array(
 			'class' => 'widget-area widget-column column',
-			'name'  => _x( 'Footer Middle', 'Widget area name in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' ),
-			'desc'  => _x( 'Widget area at the middle footer', 'Widget area description in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' )
+			'name'  => _x( 'Footer Middle', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
+			'desc'  => _x( 'Widget area at the middle footer', 'Widget area description in wp-admin/widgets.php', 'helsinki' )
 		),
 		'footer-right' => array(
 			'class' => 'widget-area widget-column column',
-			'name'  => _x( 'Footer Right', 'Widget area name in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' ),
-			'desc'  => _x( 'Widget area at the right footer', 'Widget area description in wp-admin/widgets.php', 'PARALLACTIC_TEXTDOMAIN' )
+			'name'  => _x( 'Footer Right', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
+			'desc'  => _x( 'Widget area at the right footer', 'Widget area description in wp-admin/widgets.php', 'helsinki' )
 		),
 	);
 
@@ -61,7 +61,7 @@ function parallactic_widgets_init() {
  * @param   array $params
  * @return  array
  */
-function parallactic_filter_dynamic_sidebar_params( Array $params ) {
+function helsinki_filter_dynamic_sidebar_params( Array $params ) {
 	global $wp_registered_widgets;
 
 	$classes     = array();

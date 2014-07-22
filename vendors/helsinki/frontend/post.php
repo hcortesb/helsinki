@@ -1,6 +1,6 @@
 <?php
 /**
- * Feature Name:    Post Functions for Parallactic-Theme
+ * Feature Name:    Post Functions for Helsinki-Theme
  * Version:         0.9
  * Author:          Inpsyde GmbH for MarketPress.com
  * Author URI:      http://marketpress.com
@@ -15,7 +15,7 @@
  *
  * @return      string
  */
-function parallactic_get_posts_pagination( Array $args = array() ) {
+function helsinki_get_posts_pagination( Array $args = array() ) {
 	global $wp_query;
 
 	$paginated = $wp_query->max_num_pages;
@@ -44,24 +44,24 @@ function parallactic_get_posts_pagination( Array $args = array() ) {
 		'type' 		=> 'list',
 		'prev_text'	=> sprintf(
 			'<span title="%s">‹</span>',
-			__( 'Previous', 'PARALLACTIC_TEXTDOMAIN' )
+			__( 'Previous', 'helsinki' )
 		),
 		'next_text'	=> sprintf(
 			'<span title="%s">›</span>',
-			__( 'Next', 'PARALLACTIC_TEXTDOMAIN' )
+			__( 'Next', 'helsinki' )
 		),
 	);
 
-	$rtn = apply_filters( 'pre_parallactic_get_posts_pagination', FALSE, $args, $default_args );
+	$rtn = apply_filters( 'pre_helsinki_get_posts_pagination', FALSE, $args, $default_args );
 	if ( $rtn !== FALSE )
 		return $rtn;
 
 	$args = wp_parse_args( $args, $default_args );
-	$args = apply_filters( 'parallactic_get_posts_pagination_args', $args );
+	$args = apply_filters( 'helsinki_get_posts_pagination_args', $args );
 
 	$output = paginate_links( $args );
 
-	return apply_filters( 'parallactic_get_posts_pagination', $output, $args );
+	return apply_filters( 'helsinki_get_posts_pagination', $output, $args );
 }
 
 
@@ -73,14 +73,14 @@ function parallactic_get_posts_pagination( Array $args = array() ) {
  * @param   integer $length
  * @return  string
  */
-function parallactic_filter_excerpt_more( $length ) {
+function helsinki_filter_excerpt_more( $length ) {
 
 	global $post;
 
 	$markup = '<p><a href="%s" title="%s" class="more-link">%s</a></p>';
 	$link = get_permalink();
 	$title_attr = esc_attr( $post->title );
-	$title = _x( 'Continue&#160;reading&#160;&#8230;', 'More link text', 'PARALLACTIC_TEXTDOMAIN' ); // hard space + […]
+	$title = _x( 'Continue&#160;reading&#160;&#8230;', 'More link text', 'helsinki' ); // hard space + […]
 	$output = '&#160;[&#8230;] ';
 	$output .= sprintf(
 		$markup,

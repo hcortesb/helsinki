@@ -7,7 +7,7 @@
  * other 'pages' on your WordPress site will use a different template.
  *
  * @package    WordPress
- * @subpackage Parallactic
+ * @subpackage Helsinki
  */
 
 get_header();

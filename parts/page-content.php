@@ -3,7 +3,7 @@
  * The article
  *
  * @package    WordPress
- * @subpackage Parallactic\Parts
+ * @subpackage Helsinki\Parts
  */
 ?>
 
@@ -17,12 +17,12 @@
 	<div class="wrapper">
 		<header>
 			<h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<?php do_action( 'parallactic_single_page_header' ); ?>
+			<?php do_action( 'helsinki_single_page_header' ); ?>
 		</header>
 		<main>
-			<?php do_action( 'parallactic_single_page_before_content' ); ?>
+			<?php do_action( 'helsinki_single_page_before_content' ); ?>
 			<?php the_content(); ?>
-			<?php do_action( 'parallactic_single_page_after_content' ); ?>
+			<?php do_action( 'helsinki_single_page_after_content' ); ?>
 		</main>
 	</div>
 </article>

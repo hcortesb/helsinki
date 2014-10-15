@@ -7,6 +7,7 @@ Modern parallax responsive theme with a comfortable API, clean code and high qua
 
 * Retina-ready
 * Responsive
+* Parallax-Effects
 * HTML5 & CSS3
 * Supports common browsers and IE8+
 * Built for WordPress 4.+

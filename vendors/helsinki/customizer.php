@@ -18,7 +18,7 @@
 function helsinki_register_customizer_sections( $wp_customize ) {
 
 	$wp_customize->add_section( 'helsinki_colors' , array(
-		'title' => __( 'Colors', 'theme_helsinki' )
+		'title' => __( 'Colors', 'helsinki' )
 	) );
 
 	$wp_customize->add_setting( 'link_color', array(
@@ -27,7 +27,7 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label' => __( 'Key Color', 'theme_helsinki' ),
+		'label' => __( 'Key Color', 'helsinki' ),
 		'section' => 'helsinki_colors',
 		'settings' => 'link_color',
 	) ) );

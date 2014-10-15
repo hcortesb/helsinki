@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Helsinki v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-10-15 15:15:58+0000\n"
+"PO-Revision-Date: 2014-10-15 21:11:36+0000\n"
 "Last-Translator: admin <t.herzog@inpsyde.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,14 +71,14 @@ msgid "Menu"
 msgstr ""
 
 #: vendors/helsinki/customizer.php:21
-#@ theme_helsinki
+#@ helsinki
 msgid "Colors"
-msgstr ""
+msgstr "Farben"
 
 #: vendors/helsinki/customizer.php:30
-#@ theme_helsinki
+#@ helsinki
 msgid "Key Color"
-msgstr ""
+msgstr "Hauptfarbe"
 
 #: vendors/helsinki/frontend/comment.php:30
 #, php-format

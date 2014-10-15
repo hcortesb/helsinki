@@ -322,7 +322,8 @@ body > main article .post-thumbnail {
 
 body > main article img {
 	max-width: 100%;
-	height: 100%;
+	height: auto;
+	padding: 0 10px;
 }
 
 body > main article .comments {
@@ -357,22 +358,28 @@ body > main article .comments a:hover {
 /** Captions **/
 
 .wp-caption {
+	max-width: 100%;
+	padding: 4px;
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+.wp-caption {
 	margin: 15px 0;
 	position: relative;
 }
 
 .wp-caption img {
+	padding: 0;
 	display: block;
 }
 
 .wp-caption-text {
 	margin: 0;
-	bottom: 0;
-	padding: 0;
 	color: #fff;
 	width: 100%;
+	padding: 5px 0;
 	text-align: center;
-	position: absolute;
 	background: rgba(0,0,0,0.75);
 }
 

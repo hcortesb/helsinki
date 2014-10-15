@@ -121,7 +121,7 @@ function helsinki_get_footer_theme_info() {
 	$author     = $theme_data->get( 'Author' );
 
 	$link =  sprintf(
-		_x( 'A %1$s Beta-Theme', 'Theme author link', 'helsinki' ),
+		_x( 'A %1$s Theme', 'Theme author link', 'helsinki' ),
 		'<a href="' . $author_uri . '" rel="designer">' . $author . '</a>'
 	);
 

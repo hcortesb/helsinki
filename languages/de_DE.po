@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Helsinki v0.9\n"
+"Project-Id-Version: Helsinki v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-07-22 09:28:50+0000\n"
+"PO-Revision-Date: 2014-10-15 15:15:58+0000\n"
 "Last-Translator: admin <t.herzog@inpsyde.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,12 @@ msgstr "404 - Seite nicht gefunden!"
 msgid "Sorry, the page you are looking for does not exist. If you think, that this is a sirious problem, please contact us. Elsewise you may want to use our search?"
 msgstr "Sorry, die Seite, nach der du suchst existiert nicht. Wenn du denkst, dass das ein echtes Problem ist, dann kontaktiere uns. Ansonsten kannst du es ja mit unserer Suche versuchen?"
 
-#: comments.php:19
+#: comments.php:18
 #@ helsinki
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Dieser Artikel ist durch ein Passwort geschützt."
 
-#: comments.php:28
+#: comments.php:27
 #, php-format
 #@ helsinki
 msgctxt "Comments title"
@@ -90,7 +90,7 @@ msgstr ""
 #: vendors/helsinki/frontend/comment.php:42
 #@ helsinki
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Dein Kommentar wartet auf Moderation."
 
 #: vendors/helsinki/frontend/comment.php:51
 #, php-format
@@ -106,74 +106,74 @@ msgstr ""
 #: vendors/helsinki/frontend/comment.php:71
 #@ helsinki
 msgid "Reply to this comment"
-msgstr ""
-
-#: vendors/helsinki/frontend/general.php:124
-#, php-format
-#@ helsinki
-msgctxt "Theme author link"
-msgid "A %1$s Beta-Theme"
-msgstr ""
+msgstr "Auf diesen Kommentar antworten"
 
 #: vendors/helsinki/frontend/post.php:47
 #@ helsinki
 msgid "Previous"
-msgstr ""
+msgstr "Vorheriges"
 
 #: vendors/helsinki/frontend/post.php:51
 #@ helsinki
 msgid "Next"
-msgstr ""
+msgstr "Nächstes"
 
 #: vendors/helsinki/frontend/post.php:83
 #@ helsinki
 msgctxt "More link text"
 msgid "Continue&#160;reading&#160;&#8230;"
-msgstr ""
+msgstr "Mehr&#160;lesen&#160;&#8230;"
 
 #: vendors/helsinki/navigation.php:18
 #@ helsinki
 msgid "Header Site Menu"
-msgstr ""
+msgstr "Kopf Menü"
 
 #: vendors/helsinki/navigation.php:19
 #@ helsinki
 msgid "Footer Site Menu"
-msgstr ""
+msgstr "Footer Menü"
 
 #: vendors/helsinki/widget.php:22
 #@ helsinki
 msgctxt "Widget area name in wp-admin/widgets.php"
 msgid "Footer Left"
-msgstr ""
+msgstr "Footer Links"
 
 #: vendors/helsinki/widget.php:23
 #@ helsinki
 msgctxt "Widget area description in wp-admin/widgets.php"
 msgid "Widget area at the left footer"
-msgstr ""
+msgstr "Widget-Bereich im linken Footer"
 
 #: vendors/helsinki/widget.php:27
 #@ helsinki
 msgctxt "Widget area name in wp-admin/widgets.php"
 msgid "Footer Middle"
-msgstr ""
+msgstr "Footer Mitte"
 
 #: vendors/helsinki/widget.php:28
 #@ helsinki
 msgctxt "Widget area description in wp-admin/widgets.php"
 msgid "Widget area at the middle footer"
-msgstr ""
+msgstr "Widget-Bereich im mittleren Footer"
 
 #: vendors/helsinki/widget.php:32
 #@ helsinki
 msgctxt "Widget area name in wp-admin/widgets.php"
 msgid "Footer Right"
-msgstr ""
+msgstr "Footer Rechts"
 
 #: vendors/helsinki/widget.php:33
 #@ helsinki
 msgctxt "Widget area description in wp-admin/widgets.php"
 msgid "Widget area at the right footer"
-msgstr ""
+msgstr "Widget-Bereich im rechten Footer"
+
+#: vendors/helsinki/frontend/general.php:124
+#, php-format
+#@ helsinki
+msgctxt "Theme author link"
+msgid "A %1$s Theme"
+msgstr "Ein %1$s Theme"
 

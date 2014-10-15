@@ -8,11 +8,10 @@
  * @subpackage Helsinki
  */
 
-if ( ! have_comments() && ! comments_open() )
-	return;
 ?>
 
-<div class="comment-list">
+<div id="comments" class="comment-list">
+	<?php if ( have_comments() ) : ?>
 	<div class="wrapper">
 		<?php if ( post_password_required() ) : ?>
 			<p class="nopassword">
@@ -48,4 +47,5 @@ if ( ! have_comments() && ! comments_open() )
 			comment_form();
 		?>
 	</div>
+	<?php endif; ?>
 </div>

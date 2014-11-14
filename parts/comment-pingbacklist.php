@@ -6,7 +6,7 @@
  * @subpackage Helsinki\Parts
  */
 
-$num = helsinki_get_count_pings();
+$num = marketpress_get_count_pings();
 if ( ! $num )
 	return;
 ?>
@@ -19,7 +19,7 @@ if ( ! $num )
 	wp_list_comments( array (
 		'type'	   => 'pings',
 		'style'	   => 'ul',
-		'callback' => 'helsinki_the_pings'
+		'callback' => 'marketpress_the_pings'
 	) );
 	?>
 </ol>

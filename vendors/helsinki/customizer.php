@@ -7,66 +7,61 @@
  */
 
 /**
- * Register the helsinki specific customizer options. In our
- * case it is a simple color picker to set a specific
- * key color.
- *
- * @param object $wp_customize
- *
- * @return void
+ * Prints the customized CSS if there is setted
+ * a color in the customizer
+ * 
+ * @wp-hook	marketpress_customized_css_file
+ * @return	string the css
  */
-function helsinki_register_customizer_sections( $wp_customize ) {
+function helsinki_customized_css_file( $output, $color, $color_rgb ) {
 
-	$wp_customize->add_section( 'helsinki_colors' , array(
-		'title' => __( 'Colors', 'helsinki' )
-	) );
+	ob_start();
+	?>
+	a,
+	body main#primary article .comments a:hover,
+	body main#primary article .comments a:focus,
+	body main#primary article .comments a:hover {
+		color: <?php echo $color; ?>;
+	}
 
-	$wp_customize->add_setting( 'link_color', array(
-		'default' => '#0084cc',
-		'transport' => 'refresh',
-	) );
+	#headline nav ul li a:hover,
+	#headline nav ul li a:focus,
+	#headline nav ul li a.active,
+	#headline nav ul li.current-menu-item a,
+	body main#primary article .comments a .count,
+	.pagination ul li .current,
+	.pagination ul li a:hover,
+	.pagination ul li a:focus,
+	.pagination ul li a.active,
+	.toggle-mobile-menu:hover,
+	.toggle-mobile-menu:focus,
+	.toggle-mobile-menu.active {
+		background: <?php echo $color; ?>;
+	}
+    <?php
+    $output = ob_get_contents();
+    ob_end_clean();
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label' => __( 'Key Color', 'helsinki' ),
-		'section' => 'helsinki_colors',
-		'settings' => 'link_color',
-	) ) );
+    return $output;
 }
 
 /**
- * Prints the customized CSS if there is setted
- * a color in the customizer
- *
- * @return void
+ * Gets the default color for helsinki
+ * 
+ * @wp-hook	marketpress_customizer_default_key_color
+ * @return	string the default color
  */
-function helsinki_print_customized_css() {
-
-	$color = get_theme_mod( 'link_color' );
-	if ( ! $color )
-		return;
-	?>
-	<style type="text/css">
-		a,
-		body > main article .comments a:hover,
-		body > main article .comments a:focus,
-		body > main article .comments a:hover {
-			color: <?php echo $color; ?>;
-		}
-
-		#headline nav ul li a:hover,
-		#headline nav ul li a:focus,
-		#headline nav ul li a.active,
-		#headline nav ul li.current-menu-item a,
-		body > main article .comments a .count,
-		.pagination ul li .current,
-		.pagination ul li a:hover,
-		.pagination ul li a:focus,
-		.pagination ul li a.active,
-		.toggle-mobile-menu:hover,
-		.toggle-mobile-menu:focus,
-		.toggle-mobile-menu.active {
-			background: <?php echo $color; ?>;
-		}
-	</style>
-    <?php
+function helsinki_customizer_default_key_color() {
+	return '#0084cc';
 }
+
+/**
+ * Disable the customizer logo
+ * 
+ * @wp-hook	marketpress_register_customizer_sections_logo
+ * @return	boolean
+ */
+function helsinki_register_customizer_sections_logo() {
+	return FALSE;
+}
+

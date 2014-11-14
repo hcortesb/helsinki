@@ -8,7 +8,7 @@
  * @subpackage Helsinki
  */
 ?>
-	<footer>
+	<footer id="footer">
 		<div class="totop"><a href="#">^</a></div>
 		<div class="wrapper">
 			<?php
@@ -25,9 +25,9 @@
 		<div class="wrapper">
 			<?php
 			// Include right copyline
-			echo helsinki_get_footer_theme_info();
+			echo marketpress_get_footer_theme_info();
 			// Include left copyline
-			get_template_part( 'parts/footer', 'navigation' );
+			get_template_part( 'parts/footer', 'social' );
 			?>
 		</div>
 	</section>

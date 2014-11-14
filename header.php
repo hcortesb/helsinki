@@ -22,12 +22,6 @@
 	<?php if ( is_singular() ) : wp_enqueue_script( 'comment-reply' ); endif; ?>
 </head>
 <body <?php body_class(); ?>>
-	<?php
-	/**
-	 * Includes the custom header of the theme
-	 */
-	get_template_part( 'parts/header', 'custom-header' );
-	?>
 	<aside id="headline">
 		<div class="wrapper">
 			<section class="logo">
@@ -55,3 +49,9 @@
 			</section>
 		</div>
 	</aside>
+	<?php
+	/**
+	 * Includes the custom header of the theme
+	 */
+	get_template_part( 'parts/header', 'custom-header' );
+	?>

@@ -57,7 +57,7 @@ function helsinki_header_style() {
 		return;
 	?>
 	<style type="text/css" id="helsinki-header-css">
-		body > header {
+		body header#header {
 			color: #<?php echo get_header_textcolor(); ?>;
 			height: <?php echo $custom_header->height; ?>px;
 			max-height: <?php echo $custom_header->height; ?>px;
@@ -65,7 +65,7 @@ function helsinki_header_style() {
 			background-size: cover !important;
 		}
 
-		body > header a {
+		body header#header a {
 			color: #<?php echo get_header_textcolor(); ?>;
 		}
 	</style>

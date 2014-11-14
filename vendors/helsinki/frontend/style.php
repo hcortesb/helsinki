@@ -59,7 +59,7 @@ function helsinki_wp_enqueue_styles() {
  */
 function helsinki_get_styles(){
 
-	$suffix = helsinki_get_script_suffix();
+	$suffix = marketpress_get_script_suffix();
 	$dir    = get_template_directory_uri() . '/assets/css/';
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'media' => $media )

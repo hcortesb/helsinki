@@ -48,14 +48,9 @@ function helsinki_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 
-	// include helpers
-	include_once( $vendor_dir . 'helsinki/helper.php' );
-
 	// image sizes
 	include_once( $vendor_dir . 'helsinki/attachment.php' );
 	helsinki_register_image_sizes();
-	add_filter( 'img_caption_shortcode', 'helsinki_caption_shortcode', 10, 3 );
-	add_filter( 'use_default_gallery_style', '__return_false' );
 
 	// navigation
 	include_once( $vendor_dir . '/helsinki/navigation.php' );
@@ -68,15 +63,12 @@ function helsinki_setup() {
 
 	// customizer
 	include_once( $vendor_dir . 'helsinki/customizer.php' );
-	add_action( 'wp_head', 'helsinki_print_customized_css' );
-	add_action( 'customize_register', 'helsinki_register_customizer_sections' );
+	add_action( 'marketpress_customized_css_file', 'helsinki_customized_css_file', 10, 3 );
+	add_filter( 'marketpress_customizer_default_key_color', 'helsinki_customizer_default_key_color' );
+	add_filter( 'marketpress_register_customizer_sections_logo', 'helsinki_register_customizer_sections_logo' );
 
 	// frontend only
 	if ( ! is_admin() ) {
-
-		// scripts
-		include_once( $vendor_dir . 'helsinki/frontend/script.php' );
-		add_action( 'wp_enqueue_scripts', 'helsinki_wp_enqueue_scripts' );
 
 		// style
 		include_once( $vendor_dir . 'helsinki/frontend/style.php' );
@@ -85,24 +77,22 @@ function helsinki_setup() {
 
 		// general template
 		include_once( $vendor_dir . 'helsinki/frontend/general.php' );
-		add_filter( 'wp_title', 'helsinki_filter_wp_title', 10, 3 );
-		add_filter( 'body_class', 'helsinki_filter_body_class', 10, 2 );
-		add_action( 'wp_head', 'helsinki_the_favicon' );
-
 
 		// comments
 		include_once( $vendor_dir . 'helsinki/frontend/comment.php' );
-
-		// posts
-		include_once( $vendor_dir . 'helsinki/frontend/post.php' );
-		add_filter( 'excerpt_more', 'helsinki_filter_excerpt_more' );
 	}
 
 	// backend only
 	if ( is_admin() ) {
+		// about
+		include_once( $vendor_dir . 'helsinki/backend/about.php' );
+		add_action( 'marketpress_about_page_overview', 'helsinki_about_page_overview' );
+
 		// style
 		include_once( $vendor_dir . 'helsinki/backend/style.php' );
 		add_action( 'admin_enqueue_scripts', 'helsinki_admin_enqueue_styles' );
 	}
 
+	include_once( $vendor_dir . 'marketpress/setup.php' );
+	marketpress_setup();
 }

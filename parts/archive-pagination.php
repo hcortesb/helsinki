@@ -11,5 +11,5 @@
 ?>
 
 <nav class="pagination" role="navigation">
-	<?php echo helsinki_get_posts_pagination(); ?>
+	<?php echo marketpress_get_posts_pagination(); ?>
 </nav>

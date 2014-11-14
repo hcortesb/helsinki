@@ -1,0 +1,3 @@
+[submodule "vendors/marketpress"]
+	path = vendors/marketpress
+	url = git@github.com:inpsyde/marketpress-essentials.git

@@ -1,0 +1,9 @@
+/**
+ * Feature Name:    Backend-Styles
+ * Version:         0.9
+ * Author:          Inpsyde GmbH for MarketPress.com
+ * Author URI:      http://marketpress.com
+ */
+
+/** Import Google Webfont so we are able to use it **/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);

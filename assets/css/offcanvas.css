@@ -1,0 +1,327 @@
+/**
+ * Feature Name: MarketPress Off Canvas CSS
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com/
+ */
+
+@CHARSET "UTF-8";
+
+/** Off-Canvas **/
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+#mp-content {
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	transition: margin-left 0.25s;
+	-webkit-transition: margin-left 0.25s;
+}
+
+#mp-content.open {
+	margin-left: 325px;
+}
+
+#offcanvas {
+	z-index: 1;
+	color: #fff;
+	width: 100%;
+	height: 40px;
+	display: none;
+	position: fixed;
+	background: #31363a;
+}
+
+@media only screen and (max-width: 800px) {
+	#offcanvas {
+		display: block;
+	}
+}
+
+#offcanvas .menu {
+	z-index: 1;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+#offcanvas h1 {
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 300;
+	padding-top: 2px;
+	text-align: center;
+	background: #31363a;
+	box-sizing: border-box;
+	text-transform: uppercase;
+}
+
+#offcanvas h1 a {
+	color: #fff;
+	padding: 5px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#offcanvas .menu .trigger {
+	color: #fff;
+	float: left;
+	width: auto;
+	height: 40px;
+	padding: 10px;
+	max-width: 40px;
+	cursor: pointer;
+	font-size: 1.5em;
+	box-sizing: border-box;
+}
+
+#offcanvas .menu .trigger:hover,
+#offcanvas .menu .trigger:focus,
+#offcanvas .menu .trigger:active {
+	background: #474e56;
+}
+
+#offcanvas .area {
+	z-index: 0;
+	width: 305px;
+	height: 100%;
+	padding: 10px;
+	position: fixed;
+	overflow-y: auto;
+	background: #31363a;
+	margin: 40px 0 0 -325px;
+    transition: margin-left 0.25s;
+    -webkit-transition: margin-left 0.25s;
+}
+
+#offcanvas .area section.widget {
+	background: transparent;
+}
+
+#offcanvas .area ul {
+	list-style: none;
+}
+
+#offcanvas .area ul a {
+	margin: 0;
+	padding: 15px;
+	color: #ffffff;
+	display: block;
+	font-size: 0.8em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#offcanvas .area.open {
+	margin-left: 0;
+}
+
+#offcanvas .wrapper {
+	width: 82%;
+	float: left;
+	max-width: 82%;
+}
+
+#offcanvas .widget {
+	margin: 10px 10px 15px;
+}
+
+#offcanvas .widget h2,
+#offcanvas .widget h3,
+#offcanvas .widget h4,
+#offcanvas .widget h5,
+#offcanvas .widget h6,
+#offcanvas .widget select {
+	padding: 0;
+	margin: 0 0 10px 10px;
+}
+
+#offcanvas .widget ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#offcanvas .widget ul a {
+	color: #fff;
+	display: block;
+	padding: 5px 10px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#offcanvas .widget ul a:hover,
+#offcanvas .widget ul a:focus,
+#offcanvas .widget ul a:active,
+#offcanvas .widget ul .current-menu-item a,
+#offcanvas .widget ul .current_page_item > a,
+#offcanvas .widget.widget_categories ul > .current-cat {
+	background: #363d43;
+}
+
+#offcanvas .widget ul ul {
+	background: #41464c;
+}
+
+#offcanvas .widget.widget_categories ul a {
+	display: inline-block;
+}
+
+#offcanvas .widget.widget_categories ul a:hover,
+#offcanvas .widget.widget_categories ul a:focus,
+#offcanvas .widget.widget_categories ul a:active,
+#offcanvas .widget.widget_categories ul .current-menu-item > a {
+	border-right: 0;
+	background: none;
+}
+
+#offcanvas .widget table > thead > tr > th,
+#offcanvas .widget table > tbody > tr > th,
+#offcanvas .widget table > tfoot > tr > th,
+#offcanvas .widget table > thead > tr > td,
+#offcanvas .widget table > tbody > tr > td,
+#offcanvas .widget table > tfoot > tr > td {
+	padding: 0;
+	border: none;
+}
+
+#offcanvas .widget #wp-calendar {
+	width: 100%;
+	font-size: 12px;
+	font-weight: 300;
+	margin-left: -2px;
+	border-spacing: 8px;
+	border-collapse: separate;
+}
+
+#offcanvas .widget #wp-calendar caption {
+	display: none;
+}
+
+#offcanvas .widget #wp-calendar tbody td {
+	padding: 6px;
+	text-align: center;
+	margin-bottom: 10px;
+	
+	border: 1px solid #f4f4f4;
+	border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#offcanvas .widget #wp-calendar tbody td: hover {
+	border-color: #e2e2e2;
+}
+
+#offcanvas .widget #wp-calendar tbody td.pad {
+	border: 0;
+}
+
+#offcanvas .widget #wp-calendar tbody td#today {
+	color: #fff;
+	background: #1e73be;
+}
+
+#offcanvas .widget #wp-calendar tfoot td#prev a,#offcanvas .widget #wp-calendar tfoot td#next a {
+	color: #888;
+	bottom: -9px;
+	font-size: 12px;
+	font-weight: 300;
+	margin-bottom: 1px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+#offcanvas .widget #wp-calendar tfoot td#prev {
+	text-align: left;
+}
+
+#offcanvas .widget #wp-calendar tfoot td#next {
+	text-align: right;
+}
+
+#offcanvas .widget #wp-calendar thead th {
+	color: #888;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+#offcanvas .widget #wp-calendar tbody td a,
+#offcanvas .widget #wp-calendar tfoot td#prev a: hover,
+#offcanvas .widget #wp-calendar tfoot td#next a: hover {
+	color: #0056a3;
+}
+
+#offcanvas .widget li.recentcomments,
+#offcanvas .widget.widget_recent_entries li,
+#offcanvas .widget.widget_rss li {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #fff;
+}
+
+#offcanvas .widget.widget_recent_entries .post-date,
+#offcanvas .widget .rss-date,
+#offcanvas .widget.widget_rss cite {
+	display: block;
+	margin-top: -5px;
+	font-size: 0.9em;
+	padding-left: 25px;
+	font-weight: normal;
+}
+
+#offcanvas .widget.widget_search .screen-reader-text,
+#offcanvas .widget.widget_search .search-submit {
+	display: none;
+}
+
+#offcanvas .widget.widget_search .search-field {
+	width: 93%;
+	margin-left: 10px;
+}
+
+#offcanvas .widget .tagcloud {
+	margin: 0 15px;
+}
+
+#offcanvas .widget .tagcloud a {
+	color: #fff;
+	padding: 1px 5px;
+	background: #41464c;
+	text-decoration: none;
+	display: inline-block;
+	margin: 2px 2px 2px 0;
+	
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#offcanvas .widget .textwidget,
+#offcanvas .widget .rssSummary {
+	padding-left: 10px;
+	font-weight: normal;
+}
+
+#offcanvas .widget.widget_rss a.rsswidget {
+	color: #fff;
+	font-weight: bold;
+}
+
+#offcanvas .widget .widget-title .rsswidget img {
+	float: left;
+	margin: 5px 10px 0 0;
+}

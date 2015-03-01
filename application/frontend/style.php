@@ -1,9 +1,9 @@
 <?php
 /**
- * Feature Name:    Style Functions for Helsinki-Theme
- * Version:         0.9
- * Author:          Inpsyde GmbH for MarketPress.com
- * Author URI:      http://marketpress.com
+ * Feature Name: Style Functions for Helsinki-Theme
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com
  */
 
 /**
@@ -59,8 +59,10 @@ function helsinki_wp_enqueue_styles() {
  */
 function helsinki_get_styles(){
 
-	$suffix = marketpress_get_script_suffix();
-	$dir    = get_template_directory_uri() . '/assets/css/';
+	$suffix  = helsinki_get_script_suffix();
+	$dir     = helsinki_get_asset_directory_url( 'css' );
+	$theme_data = wp_get_theme();
+	$version = $theme_data->Version;
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'media' => $media )
 	$styles = array();
@@ -69,7 +71,7 @@ function helsinki_get_styles(){
 	$styles[ 'helsinki' ] = array(
 		'src'       => $dir . 'style' . $suffix . '.css',
 	    'deps'      => NULL,
-	    'version'   => NULL,
+	    'version'   => $version,
 	    'media'     => NULL
 	);
 
@@ -77,7 +79,7 @@ function helsinki_get_styles(){
 	$styles[ 'helsinki-media' ] = array(
 		'src'       => $dir . 'media' . $suffix . '.css',
 		'deps'      => NULL,
-		'version'   => NULL,
+		'version'   => $version,
 		'media'     => NULL
 	);
 
@@ -87,16 +89,50 @@ function helsinki_get_styles(){
 	$styles[ 'helsinki-webfont-open-sans' ] = array(
 		'src'       => add_query_arg( $open_sans_query_args, "$protocol://fonts.googleapis.com/css" ),
 		'deps'      => array(),
-		'version'   => NULL,
+		'version'   => $version,
 		'media'     => NULL
 	);
 	$open_sans_condensed_query_args = array( 'family' => 'Open+Sans+Condensed:300,700' );
 	$styles[ 'helsinki-webfont-open-sans-condensed' ] = array(
 		'src'       => add_query_arg( $open_sans_condensed_query_args, "$protocol://fonts.googleapis.com/css" ),
 		'deps'      => array(),
-		'version'   => NULL,
+		'version'   => $version,
 		'media'     => NULL
 	);
+
+	// adding the font-CSS
+	$styles[ 'helsinki-fonts' ] = array(
+		'src'     => $dir . 'fonts' . $suffix . '.css',
+		'deps'    => NULL,
+		'version' => '4.0.3',
+		'media'   => NULL
+	);
+
+	// adding the magnific css
+	$styles[ 'helsinki-magnific' ] = array(
+		'src'     => $dir . 'magnific' . $suffix . '.css',
+		'deps'    => NULL,
+		'version' => '0.9.9',
+		'media'   => NULL
+	);
+
+	// adding the offcanvas-CSS
+	$styles[ 'helsinki-offcanvas' ] = array(
+		'src'     => $dir . 'offcanvas' . $suffix . '.css',
+		'deps'    => NULL,
+		'version' => $version,
+		'media'   => NULL
+	);
+
+	// check if we have a custom css
+	$custom_css = helsinki_get_custom_css_file_url();
+    if ( $custom_css !== '' )
+        $styles[ 'helsinki-custom-css' ] = array(
+            'src'       => $custom_css,
+            'deps'      => array(),
+            'version'   => $version,
+            'media'     => NULL
+        );
 
 	return apply_filters( 'helsinki_get_styles', $styles );
 }

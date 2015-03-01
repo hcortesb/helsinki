@@ -1,9 +1,9 @@
 <?php
 /**
- * Feature Name:    Attachment Helper Functions for Helsinki-Theme
- * Version:         0.9
- * Author:          Inpsyde GmbH for MarketPress.com
- * Author URI:      http://marketpress.com
+ * Feature Name: Attachment Helper Functions for Helsinki-Theme
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com
  */
 
 /**

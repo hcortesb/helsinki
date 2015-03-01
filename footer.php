@@ -25,7 +25,7 @@
 		<div class="wrapper">
 			<?php
 			// Include right copyline
-			echo marketpress_get_footer_theme_info();
+			echo helsinki_get_footer_theme_info();
 			// Include left copyline
 			get_template_part( 'parts/footer', 'social' );
 			?>

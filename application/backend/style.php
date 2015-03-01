@@ -1,9 +1,9 @@
 <?php
 /**
- * Feature Name:    Style Functions for Helsinki-Backend
- * Version:         0.9
- * Author:          Inpsyde GmbH for MarketPress.com
- * Author URI:      http://marketpress.com
+ * Feature Name: Style Functions for Helsinki-Backend
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com
  */
 
 /**
@@ -35,18 +35,20 @@ function helsinki_admin_enqueue_styles() {
  */
 function helsinki_get_admin_styles(){
 
-	$suffix = marketpress_get_script_suffix();
-	$dir    = get_template_directory_uri() . '/assets/css/';
+	$suffix = helsinki_get_script_suffix();
+	$theme_data = wp_get_theme();
+	$version = $theme_data->Version;
+	$dir    = helsinki_get_asset_directory_url( 'css' );
 
 	// $handle => array( 'src' => $src, 'deps' => $deps, 'version' => $version, 'media' => $media )
 	$styles = array();
 
-	// adding the main-CSS
+	// adding the admin-CSS
 	$styles[ 'helsinki-admin' ] = array(
-		'src'       => $dir . 'admin' . $suffix . '.css',
-	    'deps'      => NULL,
-	    'version'   => NULL,
-	    'media'     => NULL
+		'src'     => $dir . 'admin' . $suffix . '.css',
+		'deps'    => NULL,
+		'version' => $version,
+		'media'   => NULL
 	);
 
 	return apply_filters( 'helsinki_get_admin_styles', $styles );

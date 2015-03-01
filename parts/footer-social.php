@@ -8,5 +8,5 @@
  * @package    WordPress
  * @subpackage Helsinki\Parts
  */
-echo marketpress_get_social_channel_icons();
+echo helsinki_get_social_channel_icons();
 ?>

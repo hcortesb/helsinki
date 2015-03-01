@@ -1,9 +1,9 @@
 <?php
 /**
- * Feature Name:    Custom Header Stuff
- * Version:         0.9
- * Author:          Inpsyde GmbH for MarketPress.com
- * Author URI:      http://marketpress.com
+ * Feature Name: Custom Header Stuff
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com
  */
 
 /**

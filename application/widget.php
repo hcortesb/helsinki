@@ -1,9 +1,9 @@
 <?php
 /**
- * Feature Name:    Widget Functions for Helsinki-Theme
- * Version:         0.9
- * Author:          Inpsyde GmbH for MarketPress.com
- * Author URI:      http://marketpress.com
+ * Feature Name: Widget Functions for Helsinki-Theme
+ * Version:      1.0
+ * Author:       MarketPress.com
+ * Author URI:   http://marketpress.com
  */
 
 /**
@@ -31,6 +31,11 @@ function helsinki_widgets_init() {
 			'class' => 'widget-area widget-column column',
 			'name'  => _x( 'Footer Right', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
 			'desc'  => _x( 'Widget area at the right footer', 'Widget area description in wp-admin/widgets.php', 'helsinki' )
+		),
+		'off-canvas-area' => array(
+			'class' => 'widget-area widget-offcanvas offcanvas',
+			'name' => _x( 'Off-Canvas-Area', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
+			'desc' => _x( 'The widget area in the off canvas area', 'Widget area name in wp-admin/widgets.php', 'helsinki' ),
 		),
 	);
 

@@ -66,7 +66,7 @@ function helsinki_setup() {
 
 	// customizer
 	include_once( $application_dir . 'customizer.php' );
-	add_action( 'helsinki_customized_css_file', 'helsinki_customized_css_file', 10, 3 );
+	add_action( 'helsinki_customized_css_file', 'helsinki_customized_css_file', 10, 4 );
 	add_filter( 'helsinki_customizer_default_key_color', 'helsinki_customizer_default_key_color' );
 	add_filter( 'helsinki_register_customizer_sections_logo', 'helsinki_register_customizer_sections_logo' );
 	add_action( 'customize_register', 'helsinki_register_customizer_sections' );

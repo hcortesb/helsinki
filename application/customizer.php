@@ -24,7 +24,11 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 			'priority'	=> 5,
 		) );
 		$wp_customize->add_setting( 'key_color', array(
-			'default'   => apply_filters( 'helsinki_customizer_default_key_color', '#ff5950' ),
+			'default'   => '#0084cc',
+			'transport' => 'refresh',
+		) );
+		$wp_customize->add_setting( 'footer_link_color', array(
+			'default'   => '#0084cc',
 			'transport' => 'refresh',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'key_color', array(
@@ -32,6 +36,12 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 			'description' => __( 'The key color is the main color of the website. Usually it is the color of the links, hovers and backgrounds.', 'helsinki' ),
 			'section'  => 'colors',
 			'settings' => 'key_color',
+		) ) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_link_color', array(
+			'label'	=> __( 'Footer Link Color', 'helsinki' ),
+			'description' => __( 'This color is for the links in the footer area of the website.', 'helsinki' ),
+			'section'  => 'colors',
+			'settings' => 'footer_link_color',
 		) ) );
 	}
 
@@ -106,8 +116,11 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
 
 	$color = get_theme_mod( 'key_color' );
-	if ( ! $color )
-		return FALSE;
+	if ( empty( $color ) )
+		$color = helsinki_customizer_default_key_color();
+	$footer_link_color = get_theme_mod( 'footer_link_color' );
+	if ( empty( $footer_link_color ) )
+		$footer_link_color = helsinki_customizer_default_key_color();
 
 	$color_rgb = helsinki_hex_to_rgb( $color );
 	$color_rgb = $color_rgb[ 0 ] . ', ' . $color_rgb[ 1 ] . ', ' . $color_rgb[ 2 ];
@@ -129,7 +142,7 @@ function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
 		touch( $output_file_min );
 
 	// Load the CSS via filter
-	$css = apply_filters( 'helsinki_customized_css_file', '', $color, $color_rgb );
+	$css = apply_filters( 'helsinki_customized_css_file', '', $color, $color_rgb, $footer_link_color );
 	// writing stuff to output
 	file_put_contents( $output_file, $css );
 
@@ -162,10 +175,6 @@ function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
  */
 function helsinki_get_custom_css_file_url() {
 
-	$color = get_theme_mod( 'key_color' );
-	if ( ! $color )
-		return FALSE;
-
 	// get directory
 	$upload_dir = wp_upload_dir();
 	$upload_basedir = $upload_dir[ 'baseurl' ];
@@ -188,7 +197,7 @@ function helsinki_get_custom_css_file_url() {
  * @wp-hook	helsinki_customized_css_file
  * @return	string the css
  */
-function helsinki_customized_css_file( $output, $color, $color_rgb ) {
+function helsinki_customized_css_file( $output, $color, $color_rgb, $footer_link_color ) {
 
 	ob_start();
 	?>
@@ -224,6 +233,11 @@ body main#primary article .comments a .count,
 .toggle-mobile-menu.active {
 	background: <?php echo $color; ?>;
 }
+
+body .copyline a,
+body footer#footer a {
+	color: <?php echo $footer_link_color; ?>;
+}
 	<?php
 	$output = ob_get_contents();
 	ob_end_clean();
@@ -238,7 +252,7 @@ body main#primary article .comments a .count,
  * @return	string the default color
  */
 function helsinki_customizer_default_key_color() {
-	return '#0084cc';
+	return apply_filters( 'helsinki_customizer_default_key_color', '#0084cc' );
 }
 
 /**

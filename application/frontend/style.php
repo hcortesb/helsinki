@@ -126,13 +126,15 @@ function helsinki_get_styles(){
 
 	// check if we have a custom css
 	$custom_css = helsinki_get_custom_css_file_url();
-    if ( $custom_css !== '' )
+    if ( $custom_css !== '' ) {
+    	global $pagenow;
         $styles[ 'helsinki-custom-css' ] = array(
             'src'       => $custom_css,
             'deps'      => array(),
-            'version'   => $version,
+            'version'   => time(),
             'media'     => NULL
         );
+    }
 
 	return apply_filters( 'helsinki_get_styles', $styles );
 }

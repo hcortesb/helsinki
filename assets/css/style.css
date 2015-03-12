@@ -875,6 +875,11 @@ body .copyline {
 	background: #1d1f21;
 }
 
+body .copyline a,
+body footer#footer a {
+	color: #ff5950;
+}
+
 body .copyline .mp-site-info {
 	margin: 0;
 	padding: 0;

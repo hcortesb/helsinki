@@ -15,8 +15,7 @@ function helsinki_register_nav_menus() {
 
 	register_nav_menus(
 		array(
-		     'helsinki_header'  => __( 'Header Site Menu', 'helsinki' ),
-		     'helsinki_footer'  => __( 'Footer Site Menu',  'helsinki' ),
+		     'helsinki_header'  => __( 'Header Site Menu', 'helsinki' )
 		)
 	);
 

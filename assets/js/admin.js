@@ -11,6 +11,10 @@
 		// Pseudo-Constructor of this class
 		init: function () {
 
+			// only scroll if we are on the documentation page
+			if ( $( '.mp-documentation-nav' ).length == 0 )
+				return;
+
 			$( window ).scroll( function() {
 				var base_margin = 15;
 				var scroll_top = $( window ).scrollTop();

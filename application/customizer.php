@@ -24,12 +24,14 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 			'priority'	=> 5,
 		) );
 		$wp_customize->add_setting( 'key_color', array(
-			'default'   => '#0084cc',
-			'transport' => 'refresh',
+			'default'           => '#0084cc',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'helsinki_sanitize_color'
 		) );
 		$wp_customize->add_setting( 'footer_link_color', array(
-			'default'   => '#0084cc',
-			'transport' => 'refresh',
+			'default'           => '#0084cc',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'helsinki_sanitize_color'
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'key_color', array(
 			'label'	=> __( 'Key Color', 'helsinki' ),
@@ -114,6 +116,7 @@ function helsinki_register_customizer_sections( $wp_customize ) {
  * @return	void
  */
 function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
+	global $wp_filesystem;
 
 	$color = get_theme_mod( 'key_color' );
 	if ( empty( $color ) )
@@ -144,7 +147,7 @@ function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
 	// Load the CSS via filter
 	$css = apply_filters( 'helsinki_customized_css_file', '', $color, $color_rgb, $footer_link_color );
 	// writing stuff to output
-	file_put_contents( $output_file, $css );
+	$wp_filesystem->put_contents( $output_file, $css );
 
 	// minify css
 	// Remove comments
@@ -165,7 +168,7 @@ function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
 	$css_min = str_replace( ' )', ')', $css_min );
 
 	// writing stuff to output
-	file_put_contents( $output_file_min, $css_min );
+	$wp_filesystem->put_contents( $output_file_min, $css_min );
 }
 
 /**
@@ -265,3 +268,14 @@ function helsinki_register_customizer_sections_logo() {
 	return FALSE;
 }
 
+/**
+ * Sanitizes the color
+ * 
+ * @return	boolean
+ */
+function helsinki_sanitize_color( $color ) {
+
+	// TODO make this happen!
+
+	return TRUE;
+}

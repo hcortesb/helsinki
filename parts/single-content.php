@@ -43,6 +43,12 @@
 			<?php do_action( 'helsinki_single_post_after_content' ); ?>
 		</main>
 		<footer>
+			<div class="entry-footer">
+				<?php if ( get_the_tags() ) : ?>
+					<hr />
+					<em><?php _e( 'Tags' ) ?>: <?php the_tags( '', ', ', '' ); ?></em>
+				<?php endif; ?>
+			</div>
 			<?php previous_post_link( '<span class="alignleft">&laquo; %link</span>' ); ?>
 			<?php next_post_link( '<span class="alignright">%link &raquo;</span>' ); ?>
 			<?php do_action( 'helsinki_single_post_footer' ); ?>

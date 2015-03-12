@@ -342,6 +342,10 @@ body main#primary article .entry-meta {
 	margin: 15px 0;
 }
 
+body main#primary article .entry-meta .bypostauthor {
+	font-weight: bold;
+}
+
 body main#primary article .post-thumbnail {
 	height: 600px;
 }

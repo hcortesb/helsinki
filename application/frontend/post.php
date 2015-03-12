@@ -30,11 +30,11 @@ function helsinki_get_posts_pagination( Array $args = array() ) {
 		'total' 	=> $wp_query->max_num_pages,
 		'type' 		=> 'list',
 		'prev_text'	=> sprintf(
-			'<span title="%s">‹</span>',
+			'<span title="%s">&laquo;</span>',
 			__( 'Previous', 'helsinki' )
 		),
 		'next_text'	=> sprintf(
-			'<span title="%s">›</span>',
+			'<span title="%s">&raquo;</span>',
 			__( 'Next', 'helsinki' )
 		),
 	);
@@ -64,7 +64,7 @@ function helsinki_filter_excerpt_more( $length ) {
 
 	global $post;
 
-	// hard space + […]
+	// hard space + [...]
 	$output  = '&#160;[&#8230;] ';
 	$output .= sprintf(
 		'<p><a href="%s" title="%s" class="more-link">%s</a></p>',

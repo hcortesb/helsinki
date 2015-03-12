@@ -150,7 +150,7 @@ function helsinki_about_page_overview() {
 
 	<hr>
 	<div class="return-to-dashboard">
-		<a href="<?php echo admin_url( 'customize.php' ); ?>"><?php _e( 'Go to Themes', 'helsinki' ); ?> → <?php _e( 'Customizer', 'helsinki' ); ?></a>
+		<a href="<?php echo admin_url( 'customize.php' ); ?>"><?php _e( 'Go to Themes', 'helsinki' ); ?> -> <?php _e( 'Customizer', 'helsinki' ); ?></a>
 	</div>
 	<?php
 }
@@ -183,8 +183,8 @@ function helsinki_about_page_credits() {
 			<span class="title"><?php _e( 'Developer', 'helsinki' ); ?></span>
 		</li>
 		<li class="wp-person">
-			<?php echo get_avatar( 'c.huebinger@inpsyde.com', '60', null, 'Caspar Hübinger' ); ?>
-			<span class="web">Caspar Hübinger</span>
+			<?php echo get_avatar( 'c.huebinger@inpsyde.com', '60', null, 'Caspar H&uuml;binger' ); ?>
+			<span class="web">Caspar H&uuml;binger</span>
 			<span class="title"><?php _e( 'Support & Editorial', 'helsinki' ); ?></span>
 		</li>
 		<li class="wp-person">
@@ -251,8 +251,8 @@ function helsinki_about_page_documentation() {
 		<h3 id="helsinki_installation">Installation</h3>
 		<ol>
 			<li>Download the ZIP file from wordpress.org.</li>
-			<li>Upload the ZIP file in the backend at Design → Themes → Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website’s theme directory (usually wp-content/themes).</li>
-			<li>Activate the theme in the WordPress backend at Design → Themes.</li>
+			<li>Upload the ZIP file in the backend at Design -> Themes -> Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website’s theme directory (usually wp-content/themes).</li>
+			<li>Activate the theme in the WordPress backend at Design -> Themes.</li>
 		</ol>
 		
 		<h2 id="settings-and-customizations">Settings and Customizations</h2>
@@ -276,7 +276,7 @@ function helsinki_about_page_documentation() {
 		<h3 id="helsinki_customizer">Customizer</h3>
 		The customizer is a native WordPress feature. You can find it
 		<ul>
-			<li>in the frontend in the admin bar by the menu item “Adaption” and</li>
+			<li>in the frontend in the admin bar by the menu item "Adaption" and</li>
 			<li>in the backend in the menu bar by the item Design -> Themes -> Adaption next to the avatar of Helsinki.</li>
 		</ul>
 		<p>Again the theme refrains from as many options as possible. The most important setting you can change is the key color. The key color is responsible for the color scheme of your website. You can choose any color you want and with that change the colors of hyperlinks, highlights and overlays.</p>

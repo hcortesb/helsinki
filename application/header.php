@@ -136,7 +136,7 @@ function helsinki_admin_header_image() {
 			else
 				$style = ' style="display:none;"';
 			?>
-			<h1><a id="name" class="displaying-header-text" <?php echo $style; ?> onclick="return false;" href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1><a id="name" class="displaying-header-text" <?php echo $style; ?> onclick="return false;" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<div id="desc" class="displaying-header-text" <?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		</div>
 	</div>

@@ -243,22 +243,26 @@ body header#header #description {
 	text-decoration: none;
 }
 
-#headline nav {
+#headline nav,
+#headline .menu {
 	float: right;
-	margin-top: 30px;
+	margin-top: 18px;
 }
 
-#headline nav ul {
+#headline nav ul,
+#headline .menu ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-#headline nav ul li {
+#headline nav ul li,
+#headline .menu ul li {
 	float: left;
 }
 
-#headline nav ul li a {
+#headline nav ul li a,
+#headline .menu ul li a {
 	color: #1d1f21;
 	font-size: 1.4em;
 	display: block;
@@ -274,7 +278,11 @@ body header#header #description {
 #headline nav ul li a:hover,
 #headline nav ul li a:focus,
 #headline nav ul li a.active,
-#headline nav ul li.current-menu-item a {
+#headline nav ul li.current-menu-item a,
+#headline .menu ul li a:hover,
+#headline .menu ul li a:focus,
+#headline .menu ul li a.active,
+#headline .menu ul li.current-menu-item a {
 	color: #fff;
 	background: #0084cc;
 }
@@ -287,7 +295,8 @@ body header#header #description {
 	display: block;
 }
 
-#headline .sub-menu {
+#headline .sub-menu,
+#headline .children {
 	display: none;
 }
 

@@ -34,6 +34,7 @@ add_action( 'after_setup_theme', 'helsinki_setup', 0 );
  */
 function helsinki_setup() {
 
+
 	$application_dir = dirname( __FILE__ ) . '/application/';
 
 	// localization
@@ -51,6 +52,11 @@ function helsinki_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
+
+	// set the content width because theme
+	// check wants to have it
+	if ( ! isset( $content_width ) ) 
+		$content_width = 900;
 
 	// image sizes
 	include_once( $application_dir . 'attachment.php' );

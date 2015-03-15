@@ -18,8 +18,14 @@ function helsinki_get_logo() {
 	if ( $pre !== FALSE )
 		return $pre;
 
+	// get logo url
+	$logo = get_bloginfo( 'name' );
+	$logo_url = helsinki_get_logo_url();
+	if ( ! empty( $logo_url ) )
+		$logo = '<img src="' . $logo_url . '">';
+
 	// set the default logo
-	$default = '<h1 class="logo"><a href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a></h1>';
+	$default = '<h1 class="logo"><a href="' . home_url() . '">' . $logo . '</a></h1>';
 
 	// return string, by adding the default markup to the filter
 	return apply_filters( 'helsinki_get_logo', $default );

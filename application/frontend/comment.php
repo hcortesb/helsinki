@@ -43,17 +43,6 @@ function helsinki_the_comment( $comment, Array $args = array(), $depth = 0 ) {
 					?></p>
 			<?php endif; ?>
 			<div class="comment-text">
-
-				<?php if ( get_option( 'woocommerce_enable_review_rating' ) == 'yes' ) {
-					$rating = get_comment_meta( $comment->comment_ID, 'rating', TRUE );
-					$rating = esc_attr( $rating );
-					if ( $rating ) { ?>
-					<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', 'woocommerce' ), $rating ); ?>">
-						<span style="width:<?php echo ( intval( get_comment_meta( $GLOBALS[ 'comment' ]->comment_ID, 'rating', TRUE ) ) / 5 ) * 100; ?>%"><strong itemprop="ratingValue"><?php echo intval( get_comment_meta( $GLOBALS[ 'comment' ]->comment_ID, 'rating', TRUE ) ); ?></strong> <?php _e( 'out of 5', 'woocommerce' ); ?></span>
-					</div>
-					<?php } ?>
-				<?php } ?>
-
 				<?php comment_text(); ?>
 			</div>
 			<br class="clearfix">

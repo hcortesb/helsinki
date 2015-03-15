@@ -1,0 +1,391 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Helsinki v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-03-15 14:37:52+0000\n"
+"Last-Translator: admin <t.herzog@inpsyde.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:14
+#@ helsinki
+msgid "404 - Page not found!"
+msgstr "404 - Seite nicht gefunden!\t"
+
+#: 404.php:17
+#@ helsinki
+msgid "Sorry, the page you are looking for does not exist. If you think, that this is a sirious problem, please contact us. Elsewise you may want to use our search?"
+msgstr "Sorry, die gesuchte Seite wurde nicht gefunden. Wenn du denkst, dass das ein ernsthaftes Problem ist, dann kontaktiere uns. Wie wäre es ansonsten mit unserer Suche?"
+
+#: application/backend/about.php:51
+#@ helsinki
+msgid "About"
+msgstr "Über"
+
+#: application/backend/about.php:65
+#, php-format
+#@ helsinki
+msgid "Welcome to %s"
+msgstr "Willkommen zu %s"
+
+#: application/backend/about.php:66
+#@ helsinki
+msgid "Thank you for downloading our theme. Enjoy your beautiful new choice!"
+msgstr "Danke für das Herunterladen unseres Themes. Genieße deine tolle Entscheidung!"
+
+#: application/backend/about.php:70
+#, php-format
+#@ helsinki
+msgid "About %s"
+msgstr "Über %s"
+
+#: application/backend/about.php:71
+#@ helsinki
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: application/backend/about.php:72
+#@ helsinki
+msgid "F.A.Q."
+msgstr "F.A.Q."
+
+#: application/backend/about.php:73
+#@ helsinki
+msgid "Support Forum"
+msgstr "Support Forum"
+
+#: application/backend/about.php:74
+#@ helsinki
+msgid "Credits"
+msgstr "Credits"
+
+#: application/backend/about.php:113
+#@ helsinki
+msgid "Big images"
+msgstr "Große Bilder"
+
+#: application/backend/about.php:114
+#@ helsinki
+msgid "The theme Helsinki offers not only a custom header it also comes with the ability for basic parallactic behaviour. So the thumbnails for your articles are no thumbnails any more. Instead they fill the whole background."
+msgstr "Das Theme Helsinki kommt nicht nur mit einem anpassbaren Header, es besitzt auch die Möglichkeit für einfache Parallax-Effekte. So werden die Artikelbilder zu riesigen Hintergrundbildern."
+
+#: application/backend/about.php:126
+#@ helsinki
+msgid "Off-Canvas Widget-Area"
+msgstr "Off-Canvas Widget-Area"
+
+#: application/backend/about.php:127
+#@ helsinki
+msgid "Off-Canvas is a technology to hide Elements from the website outside of the viewport. It is visible for mobile devices only. Helsinki offers a flexible widgetarea where you are able to place any widget you want."
+msgstr "Off-Canvas ist eine Technologie, um diverse Elemente außerhalb der eigentlichen Webseite zu verstecken. Zum Beispiel können so Inhalte nur für mobile Besucher angezeigt werden. Dieses Theme bietet einen Widget-Bereich genau für diesen Zweck an."
+
+#: application/backend/about.php:133
+#@ helsinki
+msgid "Flexible Footer"
+msgstr "Flexibler Footer"
+
+#: application/backend/about.php:134
+#@ helsinki
+msgid "The footer of Helsinki comes with several widget areas, navigations and pagination elements."
+msgstr "Der Footer von Helsinki ist sehr flexibel. Zum einen besitzt er drei Widget-Areas, eine Copyright-Zeile, einen Nach-Oben-Knopf und die Social Links."
+
+#: application/backend/about.php:146
+#@ helsinki
+msgid "Ready for the customizer"
+msgstr "Bereit für den Customizer"
+
+#: application/backend/about.php:147
+#@ helsinki
+msgid "With the customizer comes the magic. With Helsinki you can change the key color, set a logo and you are able to add your social network channels."
+msgstr "Mit dem Customizer kommt die Magie. Mit Helsinki lassen sich sehr einfach die wichtigsten Farben, das Logo und die Sozialen Kanäle ändern."
+
+#: application/backend/about.php:153
+#@ helsinki
+msgid "Go to Themes"
+msgstr "Zu den Themes"
+
+#: application/backend/about.php:153
+#@ helsinki
+msgid "Customizer"
+msgstr "Anpassen"
+
+#: application/backend/about.php:167
+#@ helsinki
+msgid "Helsinki is made by the team of MarketPress. Established from the same community-oriented engagement that brought a platform like WordPress Deutschland into existence."
+msgstr "Helsinki wurde vom Team von MarketPress gemacht. Gegründet von einer Firma die aus der Open-Source-Szene gewachsen ist und Plattformen wie WordPress Deutschland hervorgebracht hat."
+
+#: application/backend/about.php:168
+#@ helsinki
+msgid "The MarketPress Theme Team"
+msgstr "Das MarketPress Theme Team"
+
+#: application/backend/about.php:173
+#@ helsinki
+msgid "Founder"
+msgstr "Gründer"
+
+#: application/backend/about.php:178
+#@ helsinki
+msgid "Designer"
+msgstr "Designer"
+
+#: application/backend/about.php:183
+#@ helsinki
+msgid "Developer"
+msgstr "Entwicklung"
+
+#: application/backend/about.php:188
+#@ helsinki
+msgid "Support & Editorial"
+msgstr "Support & Editorial"
+
+#: application/backend/about.php:193
+#@ helsinki
+msgid "Developer & Support"
+msgstr "Entwicklung & Support"
+
+#: application/backend/about.php:198
+#: application/backend/about.php:203
+#@ helsinki
+msgid "Support"
+msgstr "Support"
+
+#: application/customizer.php:23
+#@ helsinki
+msgid "Colors"
+msgstr "Farben"
+
+#: application/customizer.php:37
+#@ helsinki
+msgid "Key Color"
+msgstr "Key-Farbe"
+
+#: application/customizer.php:38
+#@ helsinki
+msgid "The key color is the main color of the website. Usually it is the color of the links, hovers and backgrounds."
+msgstr "Die Key-Farbe ist die wichtigste Farbe eine Webseite. Sie ist die Farbe der Buttons, Links und Highlights."
+
+#: application/customizer.php:43
+#@ helsinki
+msgid "Footer Link Color"
+msgstr "Footer Link Farbe"
+
+#: application/customizer.php:44
+#@ helsinki
+msgid "This color is for the links in the footer area of the website."
+msgstr "Die Farbe für die Links im Footer."
+
+#: application/customizer.php:54
+#: application/customizer.php:67
+#@ helsinki
+msgid "Logo"
+msgstr "Logo"
+
+#: application/customizer.php:56
+#@ helsinki
+msgid "Upload a logo which usually replaces the default site name and description in the header"
+msgstr "Lade ein Logo hoch, welches den Schriftzug im Kopfbereich ändert."
+
+#: application/customizer.php:81
+#@ helsinki
+msgid "Social Media Icons"
+msgstr "Social Media Kanäle"
+
+#: application/customizer.php:82
+#@ helsinki
+msgid "In this Section you can enter your Social-Media-Channels to show them in your Theme. To do so, add the URL to your profiles in the inputs below."
+msgstr "Hier können die sozialen Kanäle hinzugefügt werden, welche dann im Footer des Themes angezeigt werden. Um das zu tun, muss einfach nur der Link zum Profil eingetragen werden."
+
+#: application/frontend/comment.php:30
+#, php-format
+#@ helsinki
+msgctxt "1: date, 2: time for comment meta"
+msgid "%1$s @ %2$s"
+msgstr "%1$s @ %2$s"
+
+#: application/frontend/comment.php:42
+#@ helsinki
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+#: application/frontend/comment.php:60
+#@ helsinki
+msgid "Reply to this comment"
+msgstr "Auf diesen Kommentar antworten"
+
+#: application/frontend/general.php:151
+#, php-format
+#@ helsinki
+msgctxt "Theme author link"
+msgid "A %1$s Theme"
+msgstr "Ein %1$s Theme"
+
+#: application/frontend/general.php:212
+#, php-format
+#@ helsinki
+msgctxt "The Share-Link in helsinki_get_social_share_links"
+msgid "Share on %s"
+msgstr "Auf %s teilen"
+
+#: application/frontend/general.php:250
+#@ helsinki
+msgctxt "Breadcrumb Home Text"
+msgid "Home"
+msgstr "Startseite"
+
+#: application/frontend/general.php:431
+#, php-format
+#@ helsinki
+msgid "Search for: %s"
+msgstr "Suche nach: %s"
+
+#: application/frontend/general.php:453
+#@ helsinki
+msgctxt "breadcrumb nav prefix"
+msgid "Error: Page does not exist."
+msgstr "Fehler: Diese Seite existiert nicht."
+
+#: application/frontend/general.php:517
+#, php-format
+#@ helsinki
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: application/frontend/post.php:34
+#@ helsinki
+msgid "Previous"
+msgstr "Vorheriges"
+
+#: application/frontend/post.php:38
+#@ helsinki
+msgid "Next"
+msgstr "Nächstes"
+
+#: application/frontend/post.php:73
+#@ helsinki
+msgctxt "More link text"
+msgid "Continue&#160;reading&#160;&#8230;"
+msgstr "weiter&#160;lesen&#160;&#8230;"
+
+#: application/navigation.php:18
+#@ helsinki
+msgid "Header Site Menu"
+msgstr "Kopf Menü"
+
+#: application/widget.php:22
+#@ helsinki
+msgctxt "Widget area name in wp-admin/widgets.php"
+msgid "Footer Left"
+msgstr "Linker Footer"
+
+#: application/widget.php:23
+#@ helsinki
+msgctxt "Widget area description in wp-admin/widgets.php"
+msgid "Widget area at the left footer"
+msgstr "Widget Bereich links im Footer"
+
+#: application/widget.php:27
+#@ helsinki
+msgctxt "Widget area name in wp-admin/widgets.php"
+msgid "Footer Middle"
+msgstr "Mittlerer Footer"
+
+#: application/widget.php:28
+#@ helsinki
+msgctxt "Widget area description in wp-admin/widgets.php"
+msgid "Widget area at the middle footer"
+msgstr "Widget Bereich in der mitte im Footer"
+
+#: application/widget.php:32
+#@ helsinki
+msgctxt "Widget area name in wp-admin/widgets.php"
+msgid "Footer Right"
+msgstr "Rechter Footer"
+
+#: application/widget.php:33
+#@ helsinki
+msgctxt "Widget area description in wp-admin/widgets.php"
+msgid "Widget area at the right footer"
+msgstr "Widget Bereich rechts im Footer"
+
+#: application/widget.php:37
+#@ helsinki
+msgctxt "Widget area name in wp-admin/widgets.php"
+msgid "Off-Canvas-Area"
+msgstr "Off-Cancas Bereich"
+
+#: application/widget.php:38
+#@ helsinki
+msgctxt "Widget area name in wp-admin/widgets.php"
+msgid "The widget area in the off canvas area"
+msgstr "Der Widget-Bereich im Off-Canvas Bereich"
+
+#: comments.php:18
+#@ helsinki
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dieser Beitrag ist passwortgeschützt. Um ihn und die Kommentare zu sehen, muss ein Passwort eingegeben werden."
+
+#: comments.php:27
+#, php-format
+#@ helsinki
+msgctxt "Comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "Ein Kommentar"
+msgstr[1] "%1$s Kommentare"
+
+#: parts/article-comment-count.php:13
+#@ helsinki
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] "Kommentar"
+msgstr[1] "Kommentare"
+
+#: parts/comment-commentlist.php:11
+#@ helsinki
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen"
+
+#: parts/comment-pagination.php:11
+#@ helsinki
+msgid "&laquo; Older Comments"
+msgstr "&laquo; Ältere Kommentare"
+
+#: parts/comment-pagination.php:14
+#@ helsinki
+msgid "Newer Comments &raquo;"
+msgstr "Neuere Kommentare &raquo;"
+
+#: parts/comment-pingbacklist.php:14
+#, php-format
+#@ helsinki
+msgctxt "Pingbacks title"
+msgid "One pingback"
+msgid_plural "%d pingbacks"
+msgstr[0] "Ein Pingback"
+msgstr[1] "%d Pingbacks"
+
+#: parts/single-content.php:38
+#@ helsinki
+msgctxt "Prefix for content pagination"
+msgid "<span>Pages:</span>"
+msgstr "<span>Seiten:</span>"
+
+#: parts/single-content.php:49
+#@ helsinki
+msgid "Tags"
+msgstr "Schlagworte"
+

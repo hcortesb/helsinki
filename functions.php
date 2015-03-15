@@ -37,7 +37,7 @@ function helsinki_setup() {
 	$application_dir = dirname( __FILE__ ) . '/application/';
 
 	// localization
-	load_theme_textdomain( 'helsinki', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'helsinki', get_template_directory() . '/languages/' );
 
 	// helper
 	include_once( $application_dir . 'helper.php' );
@@ -68,8 +68,6 @@ function helsinki_setup() {
 	// customizer
 	include_once( $application_dir . 'customizer.php' );
 	add_action( 'helsinki_customized_css_file', 'helsinki_customized_css_file', 10, 4 );
-	add_filter( 'helsinki_customizer_default_key_color', 'helsinki_customizer_default_key_color' );
-	add_filter( 'helsinki_register_customizer_sections_logo', 'helsinki_register_customizer_sections_logo' );
 	add_action( 'customize_register', 'helsinki_register_customizer_sections' );
 	add_action( 'customize_preview_init', 'helsinki_save_custom_css_file' );
 	add_action( 'customize_save_after', 'helsinki_save_custom_css_file' );

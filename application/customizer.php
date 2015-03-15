@@ -21,29 +21,29 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 	if ( $enabled_key_color ) {
 		$wp_customize->add_section( 'colors' , array(
 			'title'	   => __( 'Colors', 'helsinki' ),
-			'priority'	=> 5,
+			'priority'=> 5,
 		) );
 		$wp_customize->add_setting( 'key_color', array(
-			'default'           => '#0084cc',
+			'default'           => apply_filters( 'helsinki_customizer_default_key_color', '#0084cc' ),
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'helsinki_sanitize_color'
 		) );
 		$wp_customize->add_setting( 'footer_link_color', array(
-			'default'           => '#0084cc',
+			'default'           => apply_filters( 'helsinki_customizer_default_footer_link_color', '#d36037' ),
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'helsinki_sanitize_color'
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'key_color', array(
-			'label'	=> __( 'Key Color', 'helsinki' ),
+			'label'	      => __( 'Key Color', 'helsinki' ),
 			'description' => __( 'The key color is the main color of the website. Usually it is the color of the links, hovers and backgrounds.', 'helsinki' ),
-			'section'  => 'colors',
-			'settings' => 'key_color',
+			'section'     => 'colors',
+			'settings'    => 'key_color',
 		) ) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_link_color', array(
-			'label'	=> __( 'Footer Link Color', 'helsinki' ),
+			'label'	      => __( 'Footer Link Color', 'helsinki' ),
 			'description' => __( 'This color is for the links in the footer area of the website.', 'helsinki' ),
-			'section'  => 'colors',
-			'settings' => 'footer_link_color',
+			'section'     => 'colors',
+			'settings'    => 'footer_link_color',
 		) ) );
 	}
 
@@ -51,12 +51,14 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 	$enabled_logo = apply_filters( 'helsinki_register_customizer_sections_logo', TRUE );
 	if ( $enabled_logo ) {
 		$wp_customize->add_section( 'helsinki_logo_section', array (
-			'title'	   => __( 'Logo', 'helsinki' ),
-			'priority'	=> 6,
-			'description' => __( 'Upload a logo which usually replaces the default site name and description in the header', 'theme_helsinki_textdomain' )
+			'title'	      => __( 'Logo', 'helsinki' ),
+			'priority'    => 6,
+			'description' => __( 'Upload a logo which usually replaces the default site name and description in the header', 'helsinki' )
 		) );
 		$wp_customize->add_setting( 'helsinki_logo', array (
-			'default' => ''
+			'default'           => '',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'esc_url_raw'
 		) );
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control( $wp_customize,
@@ -76,9 +78,9 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 		$wp_customize->add_section(
 			'social_icons_section',
 			array (
-				'title'	   => __( 'Social Media Icons', 'helsinki' ),
+				'title'	      => __( 'Social Media Icons', 'helsinki' ),
 				'description' => __( 'In this Section you can enter your Social-Media-Channels to show them in your Theme. To do so, add the URL to your profiles in the inputs below.', 'helsinki' ),
-				'priority'	=> 7,
+				'priority'	  => 7,
 			)
 		);
 		$settings = helsinki_get_social_medias();
@@ -118,12 +120,18 @@ function helsinki_register_customizer_sections( $wp_customize ) {
 function helsinki_save_custom_css_file( WP_Customize_Manager $wp_customize ) {
 	global $wp_filesystem;
 
+	// Initialize the WP filesystem, no more using 'file-put-contents' function
+	if ( empty( $wp_filesystem ) ) {
+	    require_once ( ABSPATH . '/wp-admin/includes/file.php' );
+	    WP_Filesystem();
+	}
+
 	$color = get_theme_mod( 'key_color' );
 	if ( empty( $color ) )
-		$color = helsinki_customizer_default_key_color();
+		$color = apply_filters( 'helsinki_customizer_default_key_color', '#0084cc' );
 	$footer_link_color = get_theme_mod( 'footer_link_color' );
 	if ( empty( $footer_link_color ) )
-		$footer_link_color = helsinki_customizer_default_key_color();
+		$footer_link_color = apply_filters( 'helsinki_customizer_default_footer_link_color', '#d36037' );
 
 	$color_rgb = helsinki_hex_to_rgb( $color );
 	$color_rgb = $color_rgb[ 0 ] . ', ' . $color_rgb[ 1 ] . ', ' . $color_rgb[ 2 ];
@@ -249,26 +257,6 @@ body footer#footer a {
 }
 
 /**
- * Gets the default color for helsinki
- * 
- * @wp-hook	helsinki_customizer_default_key_color
- * @return	string the default color
- */
-function helsinki_customizer_default_key_color() {
-	return apply_filters( 'helsinki_customizer_default_key_color', '#0084cc' );
-}
-
-/**
- * Disable the customizer logo
- * 
- * @wp-hook	helsinki_register_customizer_sections_logo
- * @return	boolean
- */
-function helsinki_register_customizer_sections_logo() {
-	return FALSE;
-}
-
-/**
  * Sanitizes the color
  * 
  * @return	boolean
@@ -277,5 +265,5 @@ function helsinki_sanitize_color( $color ) {
 
 	// TODO make this happen!
 
-	return TRUE;
+	return $color;
 }

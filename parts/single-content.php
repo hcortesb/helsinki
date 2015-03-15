@@ -46,7 +46,7 @@
 			<div class="entry-footer">
 				<?php if ( get_the_tags() ) : ?>
 					<hr />
-					<em><?php _e( 'Tags' ) ?>: <?php the_tags( '', ', ', '' ); ?></em>
+					<em><?php _e( 'Tags', 'helsinki' ); ?>: <?php the_tags( '', ', ', '' ); ?></em>
 				<?php endif; ?>
 			</div>
 			<?php previous_post_link( '<span class="alignleft">&laquo; %link</span>' ); ?>

@@ -251,7 +251,7 @@ function helsinki_about_page_documentation() {
 		<h3 id="helsinki_installation">Installation</h3>
 		<ol>
 			<li>Download the ZIP file from wordpress.org.</li>
-			<li>Upload the ZIP file in the backend at Design -> Themes -> Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website’s theme directory (usually wp-content/themes).</li>
+			<li>Upload the ZIP file in the backend at Design -> Themes -> Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website's theme directory (usually wp-content/themes).</li>
 			<li>Activate the theme in the WordPress backend at Design -> Themes.</li>
 		</ol>
 		

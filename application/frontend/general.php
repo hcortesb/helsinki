@@ -25,7 +25,7 @@ function helsinki_get_logo() {
 		$logo = '<img src="' . $logo_url . '">';
 
 	// set the default logo
-	$default = '<h1 class="logo"><a href="' . home_url() . '">' . $logo . '</a></h1>';
+	$default = '<h1><a href="' . home_url() . '">' . $logo . '</a></h1>';
 
 	// return string, by adding the default markup to the filter
 	return apply_filters( 'helsinki_get_logo', $default );

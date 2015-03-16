@@ -229,11 +229,17 @@ body header#header #description {
 	position: fixed;
 }
 
+
 #headline .logo {
 	float: left;
-	font-size: 1.4em;
+	margin: 20px 0;
+}
+
+#headline .logo h1 {
+	padding: 0;
+	margin: 5px 0;
+	font-size: 2em;
 	font-weight: 300;
-	margin: 19px 0;
 	font-family: 'Open Sans Condensed';
 }
 
@@ -286,7 +292,17 @@ body header#header #description {
 	background: #0084cc;
 }
 
-#headline:after {
+#headline .wrapper {
+	position: relative;
+}
+
+#headline .wrapper .navigation {
+	right: 0;
+	bottom: 20px;
+	position: absolute;
+}
+
+#headline .wrapper:after {
 	clear: both;
 	content: ' ';
 	height: 0;

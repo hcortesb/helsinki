@@ -217,76 +217,74 @@ function helsinki_about_page_documentation() {
 	<div class="mp-documentation-nav">
 		<ul>
 			<li>
-				<a href="#helsinki-theme">Helsinki Theme</a>
+				<a href="#helsinki-theme"><?php _e( 'Helsinki Theme', 'helsinki' ); ?></a>
 				<ul>
-					<li><a href="#helsinki_requirements">Minimum Requirements</a></li>
-					<li><a href="#helsinki_installation">Installation</a></li>
+					<li><a href="#helsinki_requirements"><?php _e( 'Minimum Requirements', 'helsinki' ); ?></a></li>
+					<li><a href="#helsinki_installation"><?php _e( 'Installation', 'helsinki' ); ?></a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="#settings-and-customizations">Settings and Customizations</a>
+				<a href="#settings-and-customizations"><?php _e( 'Settings and Customizations', 'helsinki' ); ?></a>
 				<ul>
-					<li><a href="#helsinki_navigation">Navigation</a></li>
-					<li><a href="#helsinki_formats">Image Formats</a></li>
-					<li><a href="#helsinki_customizer">Customizer</a></li>
-					<li><a href="#helsinki_widget_areas">Widget Areas</a></li>
+					<li><a href="#helsinki_navigation"><?php _e( 'Navigation', 'helsinki' ); ?></a></li>
+					<li><a href="#helsinki_formats"><?php _e( 'Image Formats', 'helsinki' ); ?></a></li>
+					<li><a href="#helsinki_customizer"><?php _e( 'Customizer', 'helsinki' ); ?></a></li>
+					<li><a href="#helsinki_widget_areas"><?php _e( 'Widget Areas', 'helsinki' ); ?></a></li>
 				</ul>
 			</li>
-			<li><a href="#developer-api">Developer-API</a></li>
+			<li><a href="#developer-api"><?php _e( 'Developer-API', 'helsinki' ); ?></a></li>
 		</ul>
 	</div>
 
 	<div class="mp-documentation">
-		<h2 id="helsinki-theme">Helsinki Theme</h2>
-		<p>Helsinki is a mondern WordPress theme that offers a complete API where developers can add additional plugins.</p>
+		<h2 id="helsinki-theme"><?php _e( 'Helsinki Theme', 'helsinki' ); ?></h2>
+		<p><?php _e( 'Helsinki is a mondern WordPress theme that offers a complete API where developers can add additional plugins.', 'helsinki' ); ?></p>
 
-		<h3 id="helsinki_requirements">Minimum Requirements</h3>
-		<p>The minimum requirements are based on WordPress are as follows:</p>
+		<h3 id="helsinki_requirements">Minimum Requirements', 'helsinki' ); ?></h3>
+		<p><?php _e( 'The minimum requirements are based on WordPress are as follows:', 'helsinki' ); ?></p>
 		<ul>
 			<li>PHP 5.2.4</li>
 			<li>MySQL 5.0</li>
 			<li>WordPress 4.1</li>
 		</ul>
 
-		<h3 id="helsinki_installation">Installation</h3>
+		<h3 id="helsinki_installation"><?php _e( 'Installation', 'helsinki' ); ?></h3>
 		<ol>
-			<li>Download the ZIP file from wordpress.org.</li>
-			<li>Upload the ZIP file in the backend at Design -> Themes -> Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website's theme directory (usually wp-content/themes).</li>
-			<li>Activate the theme in the WordPress backend at Design -> Themes.</li>
+			<li><?php _e( 'Download the ZIP file from wordpress.org.', 'helsinki' ); ?></li>
+			<li><?php _e( 'Upload the ZIP file in the backend at Design -> Themes -> Upload to your WordPress website, OR unpack the zip file on your hard drive and upload the helsinki folder via (S)FTP to your WordPress website\'s theme directory (usually wp-content/themes).', 'helsinki' ); ?></li>
+			<li><?php _e( 'Activate the theme in the WordPress backend at Design -> Themes.', 'helsinki' ); ?></li>
 		</ol>
 		
-		<h2 id="settings-and-customizations">Settings and Customizations</h2>
-		<p>The theme Helsinki refrains on purpose from complex configurations or settings. Almost everything you see within the Theme you can change by API.</p>
+		<h2 id="settings-and-customizations"><?php _e( 'Settings and Customizations', 'helsinki' ); ?></h2>
+		<p><?php _e( 'The theme Helsinki refrains on purpose from complex configurations or settings. Almost everything you see within the Theme you can change by API.', 'helsinki' ); ?></p>
 
-		<h3 id="helsinki_navigation">Navigation</h3>
-		<p>You can use the WordPress menus in Kiel. After activating the theme you (and only you!) will be greeted with the following request:</p>
+		<h3 id="helsinki_navigation"><?php _e( 'Navigation', 'helsinki' ); ?></h3>
+		<p><?php _e( 'You can use the WordPress menus in Helsinki. After activating the theme you (and only you!) will be greeted with the following request:', 'helsinki' ); ?></p>
 		<blockquote>
-			<p>Ahoi, [you name]!<br />	Please create your own menu and place it on an available menu location.</p>
+			<p><?php _e( 'Ahoi, [you name]!<br />	Please create your own menu and place it on an available menu location.', 'helsinki' ); ?></p>
 		</blockquote>
-		<p>Just follow the link within the request and create your menus. Now you have already finished the default configuration. You can settle a main menu (above) or a meta menu (in the footer) like that. You can add menus to following areas:</p>
+		<p><?php _e( 'Just follow the link within the request and create your menus. Now you have already finished the default configuration. You can settle a main menu (above) or a meta menu (in the footer) like that. You can add menus to following areas:', 'helsinki' ); ?></p>
 		<ul>
-			<li><code>Header</code> - The navigation on the very top of the website</li>
-			<li><code>Footer</code> - The navigation on the bottom of the website usually in the footer</li>
+			<li><code>Header</code> - <?php _e( 'The navigation on the very top of the website', 'helsinki' ); ?></li>
 		</ul>
 
-		<h3 id="helsinki_formats">Image Format</h3>
-		<p>Helsinki has the ability to use the post thumbnails as parallax image backgrounds on the posts. For that you should upload these images in a high resolution. It's recommended to use 1280x800 pixels.</p>
+		<h3 id="helsinki_formats"><?php _e( 'Image Format', 'helsinki' ); ?></h3>
+		<p><?php _e( 'Helsinki has the ability to use the post thumbnails as parallax image backgrounds on the posts. For that you should upload these images in a high resolution. It\'s recommended to use 1280x800 pixels.', 'helsinki' ); ?></p>
 
-
-		<h3 id="helsinki_customizer">Customizer</h3>
-		The customizer is a native WordPress feature. You can find it
+		<h3 id="helsinki_customizer"><?php _e( 'Customizer', 'helsinki' ); ?></h3>
+		<p><?php _e( 'The customizer is a native WordPress feature. You can find it', 'helsinki' ); ?></p>
 		<ul>
-			<li>in the frontend in the admin bar by the menu item "Adaption" and</li>
-			<li>in the backend in the menu bar by the item Design -> Themes -> Adaption next to the avatar of Helsinki.</li>
+			<li><?php _e( 'in the frontend in the admin bar by the menu item "Adaption" and', 'helsinki' ); ?></li>
+			<li><?php _e( 'in the backend in the menu bar by the item Design -> Themes -> Adaption next to the avatar of Helsinki.', 'helsinki' ); ?></li>
 		</ul>
-		<p>Again the theme refrains from as many options as possible. The most important setting you can change is the key color. The key color is responsible for the color scheme of your website. You can choose any color you want and with that change the colors of hyperlinks, highlights and overlays.</p>
+		<p><?php _e( 'Again the theme refrains from as many options as possible. The most important setting you can change is the key color. The key color is responsible for the color scheme of your website. You can choose any color you want and with that change the colors of hyperlinks, highlights and overlays.', 'helsinki' ); ?></p>
 
-		<h3 id="helsinki_widget_areas">Widget Areas</h3>
-		<p>Helsinki offers some widget areas in the footer. You can add as many widgets there as you want to. There is also a widget area in the special offcanvas area. You can add there widgets as well.</p>
+		<h3 id="helsinki_widget_areas"><?php _e( 'Widget Areas', 'helsinki' ); ?></h3>
+		<p><?php _e( 'Helsinki offers some widget areas in the footer. You can add as many widgets there as you want to. There is also a widget area in the special offcanvas area. You can add there widgets as well.', 'helsinki' ); ?></p>
 
-		<h3 id="developer-api">Developer API</h3>
-		<p>On the surface it may seem that Helsinki does not offer a wide range of settings, but it is not like that. There is a huge amount of filters which help developers to build fascinating child themes. The developers of Helsinki tried to build all the functions of Helsinki in the API so that everything is changeable. You might want to have a look in functions.php to see where which filters are requested.</p>
-		<p>A detailled developer documentation will come soon.</p>
+		<h3 id="developer-api"><?php _e( 'Developer API', 'helsinki' ); ?></h3>
+		<p><?php _e( 'On the surface it may seem that Helsinki does not offer a wide range of settings, but it is not like that. There is a huge amount of filters which help developers to build fascinating child themes. The developers of Helsinki tried to build all the functions of Helsinki in the API so that everything is changeable. You might want to have a look in functions.php to see where which filters are requested.', 'helsinki' ); ?></p>
+		<p><?php _e( 'A detailled developer documentation will come soon.', 'helsinki' ); ?></p>
 	</div>
 	<?php
 }

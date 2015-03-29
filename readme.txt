@@ -3,7 +3,7 @@ Contributors: herrllama, inpsyde
 Tags: white, light, one-column, responsive-layout, flexible-header, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 Modern parallax and responsive theme with a comfortable API, clean code and high quality standards.
 

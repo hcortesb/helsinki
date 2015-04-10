@@ -49,6 +49,13 @@ Currently available languages:
 * [Forums](https://wordpress.org/support/theme/helsinki) - here you are able to report bugs, add feature requests or your questions
 * [Github](https://github.com/inpdyde/helsinki/) - Here you can fork the code
 
+= Frequently Asked Questions =
+
+=== When I added logo, header layout is distorted. Why? ===
+
+You are able to add a logo of any size. However the width of the logo depends on the width of the main menu. If you got few menu items the logo could be wider.
+The height of the logo governs the height of the header area. The higher the logo the higher the the area. The menu will be positioned at the bottom of the header.
+
 = Licenses =
 
 This theme is Licensed under the GNU GENERAL PUBLIC LICENSE Version 3. For more information see license.txt.

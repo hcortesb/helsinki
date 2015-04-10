@@ -20,19 +20,20 @@ function helsinki_maybe_redirect_to_about_page() {
 	if ( ! is_admin() )
 		return;
 
+
 	// getting the theme-data
 	$theme_data = wp_get_theme();
-	$option = sanitize_title_with_dashes( $theme_data->name ) . '-' . $theme_data->version;
-	$about_shown = get_option( '_mp' . $option, FALSE );
-	
+	$option = sanitize_title_with_dashes( $theme_data->name );
+	$latest_version = get_option( '_mp_' . $option, FALSE );
+
 	// check if we are on the page
 	if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == 'helsinki-theme-about' ) {
-		update_option( '_mp' . $option, '1' );
+		update_option( '_mp_' . $option, $theme_data->version );
 		return;
 	}
 
-	if ( $about_shown == FALSE ) {
-		update_option( '_mp' . $option, '1' );
+	if ( ! version_compare( $latest_version, $theme_data->version, '==' ) ) {
+		update_option( '_mp' . $option, $theme_data->version );
 		wp_safe_redirect( admin_url( 'themes.php?page=helsinki-theme-about' ) );
 		exit;
 	}

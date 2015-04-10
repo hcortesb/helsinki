@@ -226,12 +226,12 @@ body main#primary article .comments a:hover {
 	color: <?php echo $color; ?>;
 }
 
-#headline nav ul li a:hover,
-#headline nav ul li a:focus,
+#headline nav ul li:hover a,
+#headline nav ul li:focus a,
 #headline nav ul li a.active,
 #headline nav ul li.current-menu-item a,
-#headline .menu ul li a:hover,
-#headline .menu ul li a:focus,
+#headline .menu ul li:hover a,
+#headline .menu ul li:focus a,
 #headline .menu ul li a.active,
 #headline .menu ul li.current-menu-item a,
 body main#primary article .comments a .count,
@@ -241,7 +241,14 @@ body main#primary article .comments a .count,
 .pagination ul li a.active,
 .toggle-mobile-menu:hover,
 .toggle-mobile-menu:focus,
-.toggle-mobile-menu.active {
+.toggle-mobile-menu.active,
+#headline .sub-menu,
+#headline li:hover .sub-menu,
+#headline li .sub-menu,
+#headline nav ul li.current_page_parent a,
+#headline nav ul li.current_page_ancestor a,
+#headline .menu ul li.current_page_parent a,
+#headline .menu ul li.current_page_ancestor a {
 	background: <?php echo $color; ?>;
 }
 

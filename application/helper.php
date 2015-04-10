@@ -80,57 +80,57 @@ function helsinki_get_social_medias() {
 	$settings = array();
 
 	$settings[ 'twitter' ] = array(
-		'label'      => 'Twitter',
+		'label'      => __( 'Twitter', 'helsinki' ),
 		'icon'       => helsinki_get_icon( 'twitter' ),
 		'share_link' => '//twitter.com/share?url=%s'
 	);
 
 	$settings[ 'facebook' ] = array(
-		'label'      => 'Facebook',
+		'label'      => __( 'Facebook', 'helsinki' ),
 		'icon'       => helsinki_get_icon( 'facebook' ),
 		'share_link' => '//www.facebook.com/sharer.php?u=%s'
 	);
 
 	$settings[ 'google' ] = array(
-		'label'      => 'Google+',
+		'label'      => __( 'Google+', 'helsinki' ),
 		'icon'       => helsinki_get_icon( 'google-plus' ),
 		'share_link' => '//plusone.google.com/_/+1/confirm?hl=de&url=%s'
 	);
 
 	$settings[ 'pinterest' ] = array(
-		'label'      => 'Pinterest',
+		'label'      => __( 'Pinterest', 'helsinki' ),
 		'icon'       => helsinki_get_icon( 'pinterest' ),
 		'share_link' => '//pinterest.com/pin/create/button/?url=%s'
 	);
 
 	$settings[ 'instagram' ] = array(
-		'label' => 'Instagram',
+		'label' => __( 'Instagram', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'instagram' ),
 	);
 
 	$settings[ 'xing' ] = array(
-		'label' => 'Xing',
+		'label' => __( 'Xing', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'xing' ),
 	);
 
 	$settings[ 'github' ] = array(
-		'label' => 'GitHub',
+		'label' => __( 'GitHub', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'github' ),
 	);
 
 	$settings[ 'youtube' ] = array(
-		'label' => 'Youtube',
+		'label' => __( 'Youtube', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'youtube' ),
 	);
 
 	$settings[ 'stackoverflow' ] = array(
-		'label' => 'Stack-Overflow',
+		'label' => __( 'Stack-Overflow', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'stack-overflow' ),
 	);
 
 
 	$settings[ 'wordpress' ] = array(
-		'label' => 'WordPress.org',
+		'label' => __( 'WordPress.org', 'helsinki' ),
 		'icon'  => helsinki_get_icon( 'wordpress' ),
 	);
 

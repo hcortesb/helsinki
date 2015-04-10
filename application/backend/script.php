@@ -14,6 +14,11 @@
  * @return	void
  */
 function helsinki_admin_enqueue_scripts() {
+	global $pagenow;
+
+	// check if we need to load our scripts
+	if ( $pagenow != 'themes.php' || ! isset( $_GET[ 'page' ] ) || $_GET[ 'page' ] != 'helsinki-theme-about' )
+		return;
 
 	$scripts = helsinki_get_admin_scripts();
 

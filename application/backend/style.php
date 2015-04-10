@@ -14,6 +14,11 @@
  * @return  Void
  */
 function helsinki_admin_enqueue_styles() {
+	global $pagenow;
+
+	// check if we need to load our styles
+	if ( $pagenow != 'themes.php' || ! isset( $_GET[ 'page' ] ) || $_GET[ 'page' ] != 'helsinki-theme-about' )
+		return;
 
 	$styles = helsinki_get_admin_styles();
 

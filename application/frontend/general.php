@@ -25,7 +25,7 @@ function helsinki_get_logo() {
 		$logo = '<img src="' . $logo_url . '">';
 
 	// set the default logo
-	$default = '<h1><a href="' . home_url() . '">' . $logo . '</a></h1>';
+	$default = '<h1><a href="' . esc_url( home_url() ) . '">' . $logo . '</a></h1>';
 
 	// return string, by adding the default markup to the filter
 	return apply_filters( 'helsinki_get_logo', $default );
@@ -265,7 +265,7 @@ function helsinki_get_breadcrumbs( Array $args = array() ){
 	// filling up the breadcrumbs
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
 
-		$home_link = home_url( '/' );
+		$home_link = esc_url( home_url( '/' ) );
 
 		if ( is_category() ) {
 			$cat_obj = $wp_query->get_queried_object();

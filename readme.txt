@@ -49,6 +49,20 @@ Currently available languages:
 * [Forums](https://wordpress.org/support/theme/helsinki) - here you are able to report bugs, add feature requests or your questions
 * [Github](https://github.com/inpdyde/helsinki/) - Here you can fork the code
 
+= Licenses =
+
+This theme is Licensed under the GNU GENERAL PUBLIC LICENSE Version 3. For more information see license.txt.
+
+> **FontAwesome**
+> This theme uses the great icon font FontAwesome. Following licences apply to this software:
+> The Font Awesome font is licensed under the SIL OFL 1.1:
+> http://scripts.sil.org/OFL
+> Font Awesome CSS, LESS, and Sass files are licensed under the MIT License:
+> http://opensource.org/licenses/mit-license.html
+> The Font Awesome documentation is licensed under the CC BY 3.0 License:
+> http://creativecommons.org/licenses/by/3.0/
+> Full details: http://fontawesome.io/license
+
 == Changelog ==
 
 = 1.0 =

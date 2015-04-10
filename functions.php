@@ -99,7 +99,6 @@ function helsinki_setup() {
 		// style
 		include_once( $application_dir . 'frontend/style.php' );
 		add_action( 'wp_enqueue_scripts', 'helsinki_wp_enqueue_styles' );
-		add_filter( 'style_loader_src', 'helsinki_filter_style_loader_src', 15, 2 );
 
 		// posts
 		include_once( $application_dir . 'frontend/post.php' );

@@ -7,30 +7,6 @@
  */
 
 /**
- * Remove file version query arguments from script/stylesheet URLs.
- *
- * Leaves http://fonts.googleapis.com/css?family=MyFont untouched.
- *
- * @link    http://wordpress.stackexchange.com/a/96325/
- * @link    http://wordpress.stackexchange.com/q/99842/
- *
- * @wp-hook style_loader_src
- *
- * @param   string $url
- * @param   string $handle
- * @return  string
- */
-function helsinki_filter_style_loader_src( $url, $handle ){
-
-	$host = parse_url( $url, PHP_URL_HOST );
-
-	if ( $host === 'fonts.googleapis.com' )
-		return remove_query_arg( 'ver', $url );
-
-	return $url;
-}
-
-/**
  * Enqueue styles and scripts.
  *
  * @wp-hook wp_enqueue_scripts

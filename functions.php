@@ -132,6 +132,7 @@ function helsinki_setup() {
 		// style
 		include_once( $application_dir . 'backend/style.php' );
 		add_action( 'admin_enqueue_scripts', 'helsinki_admin_enqueue_styles' );
+		add_editor_style( helsinki_get_asset_directory_url( 'css' ) . 'editor-style.css' );
 
 		// Admin Scripts
 		include_once( $application_dir . 'backend/script.php' );

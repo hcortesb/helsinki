@@ -1,0 +1,188 @@
+body {
+	padding: 0;
+	height: 100%;
+	margin: 0 25px;
+	color: #1d1f21;
+	font-size: 15px;
+	background: #fff;
+	line-height: 1.4em;
+	word-wrap: break-word;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: #0084cc;
+}
+
+a img,
+.post-thumbnail img {
+	display: block;
+}
+
+.alignright  {
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	text-align: center;
+	margin: 0.85em auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+abbr, tla, acronym {
+	cursor: help;
+	border-bottom: 1px dotted #999;
+}
+
+blockquote {
+	color: #aaa;
+	font-size: 1.3em;
+	line-height: 1.4em;
+	font-style: italic;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin: 15px 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: transparent;
+}
+
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+	padding: 8px;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+
+table > tbody > tr:nth-child(odd) > td,
+table > tbody > tr:nth-child(odd) > th {
+	background-color: #f9f9f9;
+}
+
+dl {
+	margin: 15px 0;
+}
+
+dt {
+	width: 160px;
+	overflow: hidden;
+	text-align: left;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+dd {
+	margin-left: 20px;
+}
+
+cite {
+	font-style: italic;
+}
+
+ins {
+	text-decoration: none;
+	background-color: rgba(254,255,0,0.68);
+}
+
+pre {
+	overflow-x: auto;
+	border: 1px solid #ddd;
+}
+
+code, tt, kbd, pre {
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+}
+
+hr {
+	border: 0;
+	border-top: 3px solid #f6f6f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	line-height: 1.2em;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+	margin-bottom: 1.7em;
+}
+
+/** Captions and Images **/
+
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+.size-full,
+.size-large,
+.wp-post-image,
+.commentlist img {
+	height: auto;
+	max-width: 100%;
+}
+
+.aligncenter img {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.wp-caption {
+	padding: 4px;
+	margin-top: 1em;
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+
+.wp-caption-text {
+	color: #666;
+	margin-top: 5px;
+	font-size: 0.9em;
+}

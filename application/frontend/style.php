@@ -60,17 +60,16 @@ function helsinki_get_styles(){
 	);
 
 	// adding our webfonts
-	$protocol	= is_ssl() ? 'https' : 'http';
 	$open_sans_query_args = array( 'family' => 'Open+Sans:400,300,700' );
 	$styles[ 'helsinki-webfont-open-sans' ] = array(
-		'src'       => add_query_arg( $open_sans_query_args, "$protocol://fonts.googleapis.com/css" ),
+		'src'       => add_query_arg( $open_sans_query_args, '//fonts.googleapis.com/css' ),
 		'deps'      => array(),
 		'version'   => $version,
 		'media'     => NULL
 	);
 	$open_sans_condensed_query_args = array( 'family' => 'Open+Sans+Condensed:300,700' );
 	$styles[ 'helsinki-webfont-open-sans-condensed' ] = array(
-		'src'       => add_query_arg( $open_sans_condensed_query_args, "$protocol://fonts.googleapis.com/css" ),
+		'src'       => add_query_arg( $open_sans_condensed_query_args, '//fonts.googleapis.com/css' ),
 		'deps'      => array(),
 		'version'   => $version,
 		'media'     => NULL

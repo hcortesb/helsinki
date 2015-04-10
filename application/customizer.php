@@ -263,7 +263,12 @@ body footer#footer a {
  */
 function helsinki_sanitize_color( $color ) {
 
-	// TODO make this happen!
+	if ( '' === $color )
+		return '';
 
-	return $color;
+	// 3 or 6 hex digits, or the empty string.
+	if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+		return $color;
+
+	return NULL;
 }

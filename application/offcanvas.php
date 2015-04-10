@@ -46,6 +46,18 @@ function helsinki_get_offcanvas_code() {
 		<div class="area">
 			<?php if ( is_active_sidebar( 'off-canvas-area' ) ) : ?>
 				<?php dynamic_sidebar( 'off-canvas-area' ); ?>
+			<?php else : ?>
+				<?php
+				$nav_items_wrap = '<nav class="main-navigation" role="navigation">';
+				$nav_items_wrap .= '<ul id="%1$s" class="%2$s">%3$s</ul>';
+				$nav_items_wrap .= '</nav>';
+
+				wp_nav_menu( array(
+					'theme_location'=> 'helsinki_header',
+					'container'     => FALSE,
+					'items_wrap'    => $nav_items_wrap
+				) );
+				?>
 			<?php endif; ?>
 		</div>
 	</section>

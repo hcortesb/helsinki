@@ -62,7 +62,7 @@ function helsinki_about_page() {
 	$theme_data = wp_get_theme();
 	?>
 	<div class="wrap about-wrap">
-		<h1><?php printf( __( 'Welcome to %s', 'helsinki' ), $theme_data->name ); ?></h1>
+		<h1><?php echo sprintf( __( 'Welcome to %s', 'helsinki' ), $theme_data->name ); ?></h1>
 		<div class="about-text"><?php _e( 'Thank you for downloading our theme. Enjoy your beautiful new choice!', 'helsinki' ); ?></div>
 		<div class="mp-badge">Version <?php echo $theme_data->version ?></div>
 
@@ -240,7 +240,7 @@ function helsinki_about_page_documentation() {
 		<h2 id="helsinki-theme"><?php _e( 'Helsinki Theme', 'helsinki' ); ?></h2>
 		<p><?php _e( 'Helsinki is a mondern WordPress theme that offers a complete API where developers can add additional plugins.', 'helsinki' ); ?></p>
 
-		<h3 id="helsinki_requirements">Minimum Requirements', 'helsinki' ); ?></h3>
+		<h3 id="helsinki_requirements"><?php _e( 'Minimum Requirements', 'helsinki' ); ?></h3>
 		<p><?php _e( 'The minimum requirements are based on WordPress are as follows:', 'helsinki' ); ?></p>
 		<ul>
 			<li>PHP 5.2.4</li>

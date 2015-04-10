@@ -7,6 +7,18 @@
  */
 
 /**
+ * Loads the comment reply scripts
+ * 
+ * @wp-hook	wp_head
+ * @return	void
+ */
+function helsinki_enqueue_comment_reply_script() {
+
+	if ( is_singular() )
+		wp_enqueue_script( 'comment-reply' );
+}
+
+/**
  * Enqueue styles and scripts.
  *
  * @wp-hook	wp_enqueue_scripts

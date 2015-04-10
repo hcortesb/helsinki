@@ -94,6 +94,7 @@ function helsinki_setup() {
 
 		// Standard Scripts
 		include_once( $application_dir . 'frontend/script.php' );
+		add_action( 'wp_head', 'helsinki_enqueue_comment_reply_script' );
 		add_action( 'wp_enqueue_scripts', 'helsinki_wp_enqueue_scripts' );
 
 		// style

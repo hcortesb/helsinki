@@ -19,7 +19,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<?php wp_head(); ?>
-	<?php if ( is_singular() ) : wp_enqueue_script( 'comment-reply' ); endif; ?>
 </head>
 <body <?php body_class(); ?>>
 	<aside id="headline">

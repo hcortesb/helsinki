@@ -49,6 +49,10 @@ Currently available languages:
 * [Forums](https://wordpress.org/support/theme/helsinki) - here you are able to report bugs, add feature requests or your questions
 * [Github](https://github.com/inpdyde/helsinki/) - Here you can fork the code
 
+= Additional Credits =
+
+Photo on Screenshot is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) [Timo Newton-Syms](https://www.flickr.com/photos/timo_w2s/14970196491)
+
 = Frequently Asked Questions =
 
 === When I added logo, header layout is distorted. Why? ===

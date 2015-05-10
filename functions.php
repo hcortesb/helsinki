@@ -127,7 +127,6 @@ function helsinki_setup() {
 		// about
 		include_once( $application_dir . 'backend/about.php' );
 		add_action( 'admin_menu', 'helsinki_add_about_page', 100 );
-		add_action( 'admin_init', 'helsinki_maybe_redirect_to_about_page' );
 
 		// style
 		include_once( $application_dir . 'backend/style.php' );

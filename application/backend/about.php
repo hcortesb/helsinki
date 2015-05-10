@@ -7,39 +7,6 @@
  */
 
 /**
- * Determinates if we need to be redirected to the
- * about page.
- *
- * @wp-hook	admin_init
- * 
- * @return	void
- */
-function helsinki_maybe_redirect_to_about_page() {
-
-	// only perform the redirect on the admin panel
-	if ( ! is_admin() )
-		return;
-
-
-	// getting the theme-data
-	$theme_data = wp_get_theme();
-	$option = sanitize_title_with_dashes( $theme_data->name );
-	$latest_version = get_option( '_mp_' . $option, FALSE );
-
-	// check if we are on the page
-	if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == 'helsinki-theme-about' ) {
-		update_option( '_mp_' . $option, $theme_data->version );
-		return;
-	}
-
-	if ( ! version_compare( $latest_version, $theme_data->version, '==' ) ) {
-		update_option( '_mp' . $option, $theme_data->version );
-		wp_safe_redirect( admin_url( 'themes.php?page=helsinki-theme-about' ) );
-		exit;
-	}
-}
-
-/**
  * Adds the about page for this theme and provides
  * several filters for the manipulation
  *

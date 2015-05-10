@@ -17,9 +17,11 @@ if ( empty( $custom_header->url ) )
 
 <header id="header">
 	<div class="wrapper">
-		<div class="header-text-container">
-			<h1><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<div id="description"><?php bloginfo( 'description' ); ?></div>
-		</div>
+		<?php if ( display_header_text() ) : ?>
+			<div class="header-text-container">
+				<h1><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<div id="description"><?php bloginfo( 'description' ); ?></div>
+			</div>
+		<?php endif; ?>
 	</div>
 </header>
